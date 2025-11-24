@@ -1,7 +1,7 @@
 /* Header Navigation */
 header {
     background-color: var(--color-brand-dark);
-    padding: 1rem 2rem;
+    padding: 2rem 1.5rem;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -17,7 +17,7 @@ nav {
 }
 
 .logo {
-    height: 60px;
+    height: 75px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -37,6 +37,7 @@ nav a {
     color: var(--color-white);
     text-decoration: none;
     font-weight: 500;
+    font-size: 17px;
     transition: color 0.3s ease, transform 0.3s ease;
     display: inline-block;
 }

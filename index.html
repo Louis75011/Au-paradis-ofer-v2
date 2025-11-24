@@ -2,29 +2,32 @@
 <html lang="fr">
 
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO: Title -->
     <title>Au Paradis O'Fer – Centre d'accueil en zoothérapie équine en Normandie</title>
-    
+
     <!-- SEO: Meta Description -->
-    <meta name="description" content="Au Paradis O'Fer, centre d'accueil en zoothérapie équine situé en Normandie. Découvrez nos séances thérapeutiques avec nos chevaux, nos installations adaptées et nos gîtes ruraux.">
-    
+    <meta name="description"
+        content="Au Paradis O'Fer, centre d'accueil en zoothérapie équine situé en Normandie. Découvrez nos séances thérapeutiques avec nos chevaux, nos installations adaptées et nos gîtes ruraux.">
+
     <!-- SEO: Meta Keywords (facultatif mais utile) -->
-    <meta name="keywords" content="zoothérapie, équithérapie, chevaux thérapeutiques, gîtes ruraux Normandie, centre équestre, médiation animale">
-    
+    <meta name="keywords"
+        content="zoothérapie, équithérapie, chevaux thérapeutiques, gîtes ruraux Normandie, centre équestre, médiation animale">
+
     <!-- SEO: Meta Author -->
     <meta name="author" content="Au Paradis O'Fer">
-    
+
     <!-- SEO: Meta Robots -->
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Au Paradis O'Fer – Centre d'accueil en zoothérapie équine">
-    <meta property="og:description" content="Centre de zoothérapie équine en Hauts-de-France. Séances thérapeutiques avec nos chevaux, installations adaptées et gîtes ruraux disponibles.">
+    <meta property="og:description"
+        content="Centre de zoothérapie équine en Hauts-de-France. Séances thérapeutiques avec nos chevaux, installations adaptées et gîtes ruraux disponibles.">
     <meta property="og:url" content="https://au-paradis-ofer.fr/">
     <meta property="og:site_name" content="Au Paradis O'Fer">
     <meta property="og:image" content="https://au-paradis-ofer.fr//images/logo-sans-fond.png">
@@ -33,17 +36,18 @@
     <meta property="og:locale" content="fr_FR">
     <!-- Canonical URL (évite le contenu dupliqué) -->
     <link rel="canonical" href="https://au-paradis-ofer.fr/">
-        <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <!-- styles -->
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/carousel.css">
     <link rel="stylesheet" href="./css/cookie-consent.css">
     <link rel="stylesheet" href="./css/contact-form.css">
-    <link rel="stylesheet" href="./css/legal-pages.css">
+    <link rel="stylesheet" href="./css/carousel.css">
+    <link rel="stylesheet" href="./css/evenements.css">
     <link rel="stylesheet" href="./css/styles-pages.css">
+    <link rel="stylesheet" href="./css/legal-pages.css">
 </head>
 
 <body>
@@ -66,16 +70,18 @@
     <!-- Header Navigation -->
     <header>
         <nav>
-            <img src="./images/logo-sans-fond.png" alt="Au Paradis O'Fer" class="logo" onclick="showPage('accueil')">
+            <a href="#accueil">
+                <img src="./images/logo-sans-fond.png" alt="Logo Au Paradis O'Fer - Centre de zoothérapie équine"
+                    class="logo">
+            </a>
             <ul>
-                <!-- <li><a href="#" onclick="showPage('accueil')">Accueil</a></li> -->
-                <li><a href="#" onclick="showPage('apropos')">À propos</a></li>
-                <li><a href="#" onclick="showPage('chevaux')">Nos chevaux</a></li>
-                <li><a href="#" onclick="showPage('installations')">Nos installations</a></li>
-                <li><a href="#" onclick="showPage('seances')">Séances</a></li>
-                <li><a href="#" onclick="showPage('gites')">Gîtes</a></li>
-                <li><a href="#" onclick="showPage('faq')">FAQ</a></li>
-                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#chevaux">Nos chevaux</a></li>
+                <li><a href="#installations">Nos installations</a></li>
+                <li><a href="#seances">Séances</a></li>
+                <li><a href="#gites">Gîtes</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -85,43 +91,68 @@
         <div id="page-accueil" class="page">
             <!-- Carousel -->
             <div class="carousel-container">
-                <div class="carousel" id="carousel">
-                    <div class="carousel-slide">
-                        <img src="./images/carrousel/au-paradis-ofer-01.jpg" alt="Au Paradis O'Fer">
-                        <div class="carousel-overlay">
-                            <h2>Centre d'accueil en zoothérapie</h2>
-                            <p>Dans un cadre familial, apaisant et verdoyant.</p>
-                            <div class="carousel-btns">
-                                <a href="#" class="btn" onclick="showPage('seances')">Réserver les séances</a>
-                                <a href="#" class="btn btn-secondary" onclick="showPage('contact')">Prendre contact</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="./images/carrousel/au-paradis-ofer-02.jpg" alt="Au Paradis O'Fer">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="./images/carrousel/au-paradis-ofer-03.jpg" alt="Au Paradis O'Fer">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="./images/carrousel/au-paradis-ofer-04.jpg" alt="Au Paradis O'Fer">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="./images/carrousel/au-paradis-ofer-05.jpg" alt="Au Paradis O'Fer">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="./images/carrousel/au-paradis-ofer-06.jpg" alt="Au Paradis O'Fer">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="./images/carrousel/au-paradis-ofer-07.jpg" alt="Au Paradis O'Fer">
+                <!-- Overlay persistant en dehors des slides -->
+                <div class="carousel-overlay-persistent">
+                    <h2>Centre d'accueil en zoothérapie</h2>
+                    <p>Dans un cadre familial, apaisant et verdoyant.</p>
+                    <div class="carousel-btns">
+                        <a href="#" class="btn" onclick="showPage('seances')">Réserver les séances</a>
+                        <a href="#" class="btn btn-secondary" onclick="showPage('contact')">Prendre contact</a>
                     </div>
                 </div>
+
+                <div class="carousel" id="carousel">
+                    <div class="carousel-slide">
+                        <img src="./images/carrousel/au-paradis-ofer-01.jpg"
+                            alt="Au Paradis O'Fer - Zoothérapie équine">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./images/carrousel/au-paradis-ofer-02.jpg" alt="Au Paradis O'Fer - Nos chevaux">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./images/carrousel/au-paradis-ofer-03.jpg" alt="Au Paradis O'Fer - Installations">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./images/carrousel/au-paradis-ofer-04.jpg" alt="Au Paradis O'Fer - Cadre verdoyant">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./images/carrousel/au-paradis-ofer-05.jpg" alt="Au Paradis O'Fer - Gîtes ruraux">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./images/carrousel/au-paradis-ofer-06.jpg" alt="Au Paradis O'Fer - Médiation animale">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./images/carrousel/au-paradis-ofer-07.jpg" alt="Au Paradis O'Fer - Accueil familial">
+                    </div>
+                </div>
+
                 <div class="carousel-nav">
-                    <button onclick="prevSlide()">‹</button>
-                    <button onclick="nextSlide()">›</button>
+                    <button onclick="prevSlide()" aria-label="Image précédente">‹</button>
+                    <button onclick="nextSlide()" aria-label="Image suivante">›</button>
                 </div>
             </div>
             <div class="carousel-indicators" id="carouselIndicators"></div>
+
+            <!-- Section Événements -->
+            <section class="evenements-container">
+                <h2 class="section-title">Nos événements</h2>
+                <p class="section-subtitle">Découvrez nos animations et ateliers à venir</p>
+                <div class="evenements-grid" id="evenementsGrid"></div>
+                <div class="evenements-actions">
+                    <button class="btn btn-secondary" onclick="showAllEvenements()">Voir tous les événements</button>
+                </div>
+            </section>
+
+            <!-- Modal pour afficher tous les événements -->
+            <div id="evenementsModal" class="modal-evenements">
+                <div class="modal-evenements-content">
+                    <div class="modal-evenements-header">
+                        <h2>Tous nos événements</h2>
+                        <button class="modal-close" onclick="closeEvenementsModal()">&times;</button>
+                    </div>
+                    <div class="modal-evenements-body" id="modalEvenementsGrid"></div>
+                </div>
+            </div>
 
             <!-- Avis Section -->
             <section class="avis-container">
@@ -322,7 +353,7 @@
                     Association loi 1901<br>
                     15 Rue de Royon, 62310 Sains-lès-Fressin<br>
                     Téléphone : 06 48 34 22 53<br>
-                    Courriel : au.paradis.o.fer@gmail.com</p>
+                    Courriel : <a href="mailto:au.paradis.o.fer@gmail.com">au.paradis.o.fer@gmail.com</a></p>
 
                 <p><strong>Directeur de la publication :</strong> Louis Rouanet</p>
 
@@ -531,7 +562,7 @@
       ]
     }
     </script>
-    
+
     <!-- Scripts -->
     <script src="./js/data.js"></script>
     <script src="./js/cookieManagement.js"></script>
@@ -539,6 +570,7 @@
     <script src="./js/renderPages.js"></script>
     <script src="./js/contactForm.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/evenements.js"></script>
 </body>
 
 </html>

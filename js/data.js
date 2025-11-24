@@ -1,5 +1,85 @@
 // js\data.js
-// Data
+const evenements = [
+    {
+        "id": "noel-chevaux-2024",
+        "titre": "Noël des Chevaux",
+        "date": "2024-12-20",
+        "image": "./images/evenements/noel-des-chevaux-01.jpg"
+    },
+    {
+        "id": "noel-chevaux-03-2024",
+        "titre": "Noel des Chevaux - Poney Game",
+        "date": "2024-12-20",
+        "image": "./images/evenements/noel-des-chevaux-03.jpg"
+    },
+    {
+        "id": "noel-chevaux-02-2024",
+        "titre": "Noel des Chevaux - Rallye",
+        "date": "2024-12-7",
+        "image": "./images/evenements/noel-des-chevaux-02.jpg"
+    },
+    {
+        "id": "anniversaire-2025",
+        "titre": "Anniversaire au Paradis O'Fer",
+        "date": "2025-01-01",
+        "image": "./images/evenements/anniversaire-au-paradis-ofer.jpg"
+    },
+    {
+        "id": "automne-atelier-nature",
+        "titre": "Atelier Nature en Automne",
+        "date": "2024-11-15",
+        "image": "./images/evenements/automne-atelier-nature-souvenir.jpg"
+    },
+    {
+        "id": "bon-au-paradis-ofer-01",
+        "titre": "Bon Cadeau - Séance Découverte",
+        "date": "2025-12-31",
+        "image": "./images/evenements/bon-au-paradis-ofer-01.jpg"
+    },
+    {
+        "id": "bon-au-paradis-ofer-02",
+        "titre": "Bon Cadeau - Pack 5 Séances",
+        "date": "2025-12-31",
+        "image": "./images/evenements/bon-au-paradis-ofer-02.jpg"
+    },
+    {
+        "id": "bon-au-paradis-ofer-03",
+        "titre": "Bon Cadeau - Pack 10 Séances",
+        "date": "2025-12-31",
+        "image": "./images/evenements/bon-au-paradis-ofer-03.jpg"
+    },
+    {
+        "id": "concours-bonne-chance",
+        "titre": "Concours Bonne Chance",
+        "date": "2024-12-10",
+        "image": "./images/evenements/concours-bonne-chance.jpg"
+    },
+    {
+        "id": "poney-ballade",
+        "titre": "Ballade à Poney",
+        "date": "2025-06-15",
+        "image": "./images/evenements/poney-ballade.jpg"
+    },
+    {
+        "id": "poney-jeu-de-piste",
+        "titre": "Jeu de Piste avec les Poneys",
+        "date": "2025-07-20",
+        "image": "./images/evenements/poney-jeu-de-piste-jardin.jpg"
+    },
+    {
+        "id": "rallye-equestre-mediation",
+        "titre": "Rallye Équestre Médiation",
+        "date": "2025-08-10",
+        "image": "./images/evenements/rallye-equestre-mediation.jpg"
+    },
+    {
+        "id": "halloween-2024",
+        "titre": "Halloween au Paradis",
+        "date": "2024-10-31",
+        "image": "./images/evenements/halloween.jpg"
+    },
+];
+
 const chevaux = [
     {
         "id": "indy",
