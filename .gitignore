@@ -1,0 +1,193 @@
+# ============================================
+# FICHIERS PERSONNELS ET NOTES
+# ============================================
+.notesDev
+*.notes
+notes.txt
+TODO.txt
+NOTES.md
+
+# ============================================
+# FICHIERS SENSIBLES ET CONFIGURATION
+# ============================================
+# Variables d'environnement et clés API
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.env
+
+# Fichiers de configuration sensibles
+config.json
+secrets.json
+credentials.json
+
+# Sauvegardes et fichiers temporaires
+*.bak
+*.backup
+*.tmp
+*.swp
+*~
+
+# ============================================
+# DÉPENDANCES ET MODULES
+# ============================================
+# Node.js (si vous ajoutez des outils de build)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Bower
+bower_components/
+
+# ============================================
+# FICHIERS SYSTÈME ET ÉDITEURS
+# ============================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================
+# ÉDITEURS ET IDE
+# ============================================
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+
+# JetBrains (WebStorm, PhpStorm, IntelliJ IDEA)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+.sublime/
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+\#*\#
+.\#*
+auto-save-list
+tramp
+
+# Dreamweaver
+_notes/
+dwsync.xml
+
+# Brackets
+.brackets.json
+
+# ============================================
+# FICHIERS DE BUILD ET COMPILATION
+# ============================================
+# Dossiers de build
+dist/
+build/
+out/
+*.min.js
+*.min.css
+
+# Cache et fichiers compilés
+.cache/
+*.cache
+.parcel-cache/
+.sass-cache/
+*.css.map
+*.js.map
+
+# ============================================
+# LOGS ET RAPPORTS
+# ============================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# ============================================
+# TESTS ET COUVERTURE
+# ============================================
+coverage/
+.nyc_output/
+*.lcov
+.jest/
+
+# ============================================
+# DÉPLOIEMENT ET PRODUCTION
+# ============================================
+# Fichiers de déploiement temporaires
+.deploy/
+deploy.sh
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ============================================
+# DIVERS
+# ============================================
+# Fichiers de lock système
+*.lock
+
+# Certificats SSL (ne jamais commiter)
+*.pem
+*.key
+*.crt
+*.p12
+
+# Base de données locale
+*.db
+*.sqlite
+*.sqlite3
+
+# Fichiers de sauvegarde automatique
+*-backup
+*-old

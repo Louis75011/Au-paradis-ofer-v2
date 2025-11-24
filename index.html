@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO: Title -->
+    <title>Au Paradis O'Fer – Centre d'accueil en zoothérapie équine en Normandie</title>
+    
+    <!-- SEO: Meta Description -->
+    <meta name="description" content="Au Paradis O'Fer, centre d'accueil en zoothérapie équine situé en Normandie. Découvrez nos séances thérapeutiques avec nos chevaux, nos installations adaptées et nos gîtes ruraux.">
+    
+    <!-- SEO: Meta Keywords (facultatif mais utile) -->
+    <meta name="keywords" content="zoothérapie, équithérapie, chevaux thérapeutiques, gîtes ruraux Normandie, centre équestre, médiation animale">
+    
+    <!-- SEO: Meta Author -->
+    <meta name="author" content="Au Paradis O'Fer">
+    
+    <!-- SEO: Meta Robots -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Au Paradis O'Fer – Centre d'accueil en zoothérapie équine">
+    <meta property="og:description" content="Centre de zoothérapie équine en Hauts-de-France. Séances thérapeutiques avec nos chevaux, installations adaptées et gîtes ruraux disponibles.">
+    <meta property="og:url" content="https://au-paradis-ofer.fr/">
+    <meta property="og:site_name" content="Au Paradis O'Fer">
+    <meta property="og:image" content="https://au-paradis-ofer.fr//images/logo-sans-fond.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_FR">
+    <!-- Canonical URL (évite le contenu dupliqué) -->
+    <link rel="canonical" href="https://au-paradis-ofer.fr/">
+        <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/carousel.css">
+    <link rel="stylesheet" href="./css/cookie-consent.css">
+    <link rel="stylesheet" href="./css/contact-form.css">
+    <link rel="stylesheet" href="./css/legal-pages.css">
+    <link rel="stylesheet" href="./css/styles-pages.css">
+</head>
+
+<body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <strong>Préférences cookies</strong>
+                <p>Choisissez les catégories de cookies que vous autorisez. Les cookies essentiels au bon fonctionnement
+                    du site sont toujours actifs.</p>
+            </div>
+            <div class="cookie-actions">
+                <button class="btn btn-secondary" onclick="refuseAllCookies()">Tout refuser</button>
+                <button class="btn btn-secondary" onclick="showCookiePreferences()">Gérer mes cookies</button>
+                <button class="btn" onclick="acceptAllCookies()">Tout accepter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <img src="./images/logo-sans-fond.png" alt="Au Paradis O'Fer" class="logo" onclick="showPage('accueil')">
+            <ul>
+                <!-- <li><a href="#" onclick="showPage('accueil')">Accueil</a></li> -->
+                <li><a href="#" onclick="showPage('apropos')">À propos</a></li>
+                <li><a href="#" onclick="showPage('chevaux')">Nos chevaux</a></li>
+                <li><a href="#" onclick="showPage('installations')">Nos installations</a></li>
+                <li><a href="#" onclick="showPage('seances')">Séances</a></li>
+                <li><a href="#" onclick="showPage('gites')">Gîtes</a></li>
+                <li><a href="#" onclick="showPage('faq')">FAQ</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Accueil -->
+        <div id="page-accueil" class="page">
+            <!-- Carousel -->
+            <div class="carousel-container">
+                <div class="carousel" id="carousel">
+                    <div class="carousel-slide">
+                        <img src="./images/carrousel/au-paradis-ofer-01.jpg" alt="Au Paradis O'Fer">
+                        <div class="carousel-overlay">
+                            <h2>Centre d'accueil en zoothérapie</h2>
+                            <p>Dans un cadre familial, apaisant et verdoyant.</p>
+                            <div class="carousel-btns">
+                                <a href="#" class="btn" onclick="showPage('seances')">Réserver les séances</a>
+                                <a href="#" class="btn btn-secondary" onclick="showPage('contact')">Prendre contact</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./images/carrousel/au-paradis-ofer-02.jpg" alt="Au Paradis O'Fer">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./images/carrousel/au-paradis-ofer-03.jpg" alt="Au Paradis O'Fer">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./images/carrousel/au-paradis-ofer-04.jpg" alt="Au Paradis O'Fer">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./images/carrousel/au-paradis-ofer-05.jpg" alt="Au Paradis O'Fer">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./images/carrousel/au-paradis-ofer-06.jpg" alt="Au Paradis O'Fer">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./images/carrousel/au-paradis-ofer-07.jpg" alt="Au Paradis O'Fer">
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <button onclick="prevSlide()">‹</button>
+                    <button onclick="nextSlide()">›</button>
+                </div>
+            </div>
+            <div class="carousel-indicators" id="carouselIndicators"></div>
+
+            <!-- Avis Section -->
+            <section class="avis-container">
+                <h2 class="section-title">Ce qu'ils disent de nous</h2>
+                <div class="avis-grid" id="avisGrid"></div>
+            </section>
+        </div>
+
+        <!-- Page À propos -->
+        <div id="page-apropos" class="page hidden">
+            <section>
+                <h1 class="section-title">À propos — Au Paradis O'Fer</h1>
+                <div class="section-intro">
+                    <p>Nichée au cœur des Hauts-de-France, notre structure Au Paradis O'Fer est un havre de sérénité où
+                        la relation entre l'homme et le cheval prend toute sa dimension. Ici, le rythme apaisé de la
+                        campagne se mêle au souffle des crinières, offrant à chacun un moment de ressourcement
+                        authentique.</p>
+
+                    <p>Nous proposons des séances de médiation animale et des animations équestres adaptées à tous les
+                        âges et à toutes les situations : enfants en quête de découverte, adolescents désireux de gagner
+                        confiance, adultes et aînés recherchant détente et réconfort, ou encore personnes faisant face à
+                        des difficultés sociales ou de santé.</p>
+
+                    <p>Notre démarche est fondée sur l'écoute, le respect et la chaleur humaine. Les chevaux et poneys
+                        deviennent des compagnons de chemin, aidant à renouer avec soi-même, à vivre pleinement
+                        l'instant présent, et à goûter la beauté simple de la nature.</p>
+
+                    <p>Notre site évolue : vous y trouverez un calendrier interactif, des fiches pratiques, une galerie
+                        photo/vidéo et un espace de réservation en ligne pour faciliter votre venue.</p>
+
+                    <p>Que vous veniez pour une initiation, un moment de bien-être ou un projet d'accompagnement, Au
+                        Paradis O'Fer vous accueille avec bienveillance et passion.</p>
+
+                    <p style="font-size: 0.9rem; margin-top: 2rem;"><em>Pour en savoir plus sur la gestion des données
+                            personnelles et des cookies, vous pouvez consulter notre <a href="#"
+                                onclick="showPage('cookies')" style="color: var(--color-brand-sky);">politique
+                                dédiée</a> conforme au RGPD.</em></p>
+                </div>
+
+                <div class="about-diploma">
+                    <h3 style="color: var(--color-brand-dark); margin-bottom: 1rem;">Certification officielle</h3>
+                    <p style="max-width: 700px; margin: 0 auto 2rem;">« Médiation par l'animal en établissements de soin
+                        » délivrée par l'Institut Français de Zoothérapie et enregistrée au Répertoire Spécifique</p>
+                    <img src="./images/diplome-berangere-mediation-animal.jpg" alt="Diplôme de médiation animale">
+                </div>
+            </section>
+        </div>
+
+        <!-- Page Nos chevaux -->
+        <div id="page-chevaux" class="page hidden">
+            <section>
+                <h1 class="section-title">Nos chevaux</h1>
+                <p class="section-intro">Des compagnons sélectionnés pour leur douceur, leur stabilité et leur
+                    habituation au contact humain.</p>
+                <div class="cards-grid" id="chevauxGrid"></div>
+            </section>
+        </div>
+
+        <!-- Page Nos installations -->
+        <div id="page-installations" class="page hidden">
+            <section>
+                <h1 class="section-title">Nos installations</h1>
+                <p class="section-intro">Nos installations évoluent : l'accueil, le manège semi-couvert, la sellerie,
+                    l'allée praticable et l'aire de pansage sont déjà opérationnels, tandis que la chambre d'hôte est en
+                    travaux.</p>
+                <div class="cards-grid" id="installationsGrid"></div>
+            </section>
+        </div>
+
+        <!-- Page Séances & Tarifs -->
+        <div id="page-seances" class="page hidden">
+            <section>
+                <h1 class="section-title">Tarifs des séances de médiation</h1>
+                <p class="section-intro">Nous vous invitons à entrer en contact avec nous directement par courriel afin
+                    de convenir du moment exact du rendez-vous. Merci d'avance !</p>
+                <div class="tarifs-grid" id="tarifsGrid"></div>
+            </section>
+        </div>
+
+        <!-- Page Gîtes -->
+        <div id="page-gites" class="page hidden">
+            <section>
+                <h1 class="section-title">Gîte – prochainement</h1>
+                <div class="section-intro">
+                    <p>Nous préparons un hébergement simple et chaleureux sur place pour prolonger l'expérience au
+                        contact des chevaux.</p>
+                    <p>Informations, photos et réservation arriveront bientôt.</p>
+                    <p>À terme, les réservations en ligne seront possibles ; pour le moment, n'hésitez pas à prendre
+                        contact avec nous pour en savoir plus sur nos avancées.</p>
+                </div>
+
+                <div style="text-align: center; margin: 2rem 0;">
+                    <h3 style="color: var(--color-brand-dark); margin-bottom: 1rem;">État d'avancement</h3>
+                    <div>
+                        <span class="status-badge status-config">Configuration de l'accueil</span>
+                        <span class="status-badge status-travaux">Chambres en chantier</span>
+                        <span class="status-badge status-avenir">Équipements &amp; sécurité à venir</span>
+                    </div>
+                    <p style="margin-top: 1rem; font-weight: 600; color: var(--color-brand-dark);">Ouverture
+                        prévisionnelle : courant 2026</p>
+                </div>
+
+                <div class="tarifs-grid" id="gitesGrid" style="margin-top: 3rem;"></div>
+            </section>
+        </div>
+
+        <!-- Page FAQ -->
+        <div id="page-faq" class="page hidden">
+            <section>
+                <h1 class="section-title">Questions fréquentes</h1>
+                <div class="faq-container" id="faqContainer"></div>
+            </section>
+        </div>
+
+        <!-- Page Contact -->
+        <div id="page-contact" class="page hidden">
+            <section>
+                <h1 class="section-title">Contact &amp; Réservation</h1>
+                <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+                    <div class="form-group">
+                        <label for="nom">Nom complet *</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date souhaitée</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Votre demande ou précision..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Envoyer</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Page Cookie Preferences -->
+        <div id="page-cookie-preferences" class="page hidden">
+            <section>
+                <h1 class="section-title">Préférences cookies</h1>
+                <div class="cookie-preferences">
+                    <p style="margin-bottom: 2rem;">Choisissez les catégories de cookies que vous autorisez.</p>
+
+                    <div class="cookie-category">
+                        <div class="cookie-category-info">
+                            <h4>Préférences</h4>
+                            <p>Sauvegarde de réglages d'affichage, langue, etc.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="cookie-preferences" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="cookie-category">
+                        <div class="cookie-category-info">
+                            <h4>Analyses</h4>
+                            <p>Statistiques anonymes (ex. : Google Analytics).</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="cookie-analytics" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="cookie-category">
+                        <div class="cookie-category-info">
+                            <h4>Marketing</h4>
+                            <p>Ciblage publicitaire et partage à des tiers.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="cookie-marketing" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                        <!-- <button class="btn btn-secondary" style="flex: 1;"
+                            onclick="showPage('accueil')">Annuler</button> -->
+                        <button class="btn" style="flex: 1;" onclick="saveCookiePreferences()">Enregistrer</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Pages légales -->
+        <div id="page-mentions" class="page hidden">
+            <div class="legal-content">
+                <h1>Mentions légales</h1>
+
+                <h2>Éditeur du site</h2>
+                <p><strong>Au Paradis O'Fer</strong><br>
+                    Association loi 1901<br>
+                    15 Rue de Royon, 62310 Sains-lès-Fressin<br>
+                    Téléphone : 06 48 34 22 53<br>
+                    Courriel : au.paradis.o.fer@gmail.com</p>
+
+                <p><strong>Directeur de la publication :</strong> Louis Rouanet</p>
+
+                <h2>Développement et conception technique</h2>
+                <p><strong>Arx Systema</strong><br>
+                    Contact développeur : <a href="mailto:louis.rouanet@gallia-os.com">louis.rouanet@gallia-os.com</a>
+                </p>
+
+                <h2>Hébergement</h2>
+                <p><strong>OVHcloud</strong><br>
+                    2 rue Kellermann – 59100 Roubaix – France<br>
+                    Téléphone : 1007</p>
+
+                <h2>Propriété intellectuelle</h2>
+                <p>L'ensemble du contenu de ce site (textes, images, vidéos, logos) est la propriété exclusive d'Au
+                    Paradis O'Fer ou de ses partenaires. Toute reproduction, représentation, modification, publication,
+                    transmission ou dénaturation, totale ou partielle du site ou de son contenu, par quelque procédé que
+                    ce soit, et sur quelque support que ce soit est interdite sans autorisation écrite préalable.</p>
+
+                <h2>Responsabilité</h2>
+                <p>Au Paradis O'Fer s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce
+                    site. Toutefois, des erreurs ou omissions peuvent survenir. Le visiteur devra s'assurer de
+                    l'exactitude des informations et signaler toute modification nécessaire.</p>
+
+                <h2>Liens hypertextes</h2>
+                <p>Le site peut contenir des liens vers d'autres sites internet. Au Paradis O'Fer ne saurait être tenu
+                    responsable du contenu de ces sites externes.</p>
+
+                <h2>Données personnelles</h2>
+                <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression des
+                    données vous concernant. Pour exercer ces droits, contactez-nous à : au.paradis.o.fer@gmail.com</p>
+                <p>Pour plus d'informations, consultez notre <a href="#" onclick="showPage('cookies')"
+                        style="color: var(--color-brand-sky);">politique de confidentialité</a>.</p>
+            </div>
+        </div>
+
+        <div id="page-cookies" class="page hidden">
+            <div class="legal-content">
+                <h1>Politique cookies</h1>
+
+                <h2>Qu'est-ce qu'un cookie ?</h2>
+                <p>Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, smartphone, tablette)
+                    lors de la visite d'un site internet. Il permet de conserver des informations relatives à votre
+                    navigation.</p>
+
+                <h2>Cookies utilisés sur ce site</h2>
+
+                <h3>Cookies essentiels</h3>
+                <p>Ces cookies sont nécessaires au bon fonctionnement du site. Ils ne peuvent pas être désactivés.</p>
+                <ul>
+                    <li>Cookies de session</li>
+                    <li>Cookies de sécurité</li>
+                </ul>
+
+                <h3>Cookies de préférences</h3>
+                <p>Ces cookies permettent de sauvegarder vos préférences (langue, affichage, etc.).</p>
+
+                <h3>Cookies analytiques</h3>
+                <p>Nous privilégions des solutions sans cookies (ex. Cloudflare Web Analytics / mode cookieless),
+                    exemptées de consentement par la CNIL.</p>
+
+                <h3>Cookies marketing</h3>
+                <p>Ces cookies permettent de vous proposer des publicités ciblées. Ils nécessitent votre consentement
+                    explicite.</p>
+
+                <h2>Mesure d'audience</h2>
+                <p>Nous privilégions des solutions sans cookies (ex. Cloudflare Web Analytics / mode cookieless),
+                    exemptées de consentement par la CNIL.</p>
+
+                <h2>Gérer vos préférences</h2>
+                <p>Vous pouvez à tout moment modifier vos préférences en cliquant sur <a href="#"
+                        onclick="showPage('cookie-preferences')" style="color: var(--color-brand-sky);">Gérer mes
+                        cookies</a>.</p>
+
+                <p style="margin-top: 2rem;">Voir aussi : <a href="#" onclick="showPage('confidentialite')"
+                        style="color: var(--color-brand-sky);">Politique de confidentialité</a></p>
+            </div>
+        </div>
+
+        <div id="page-confidentialite" class="page hidden">
+            <div class="legal-content">
+                <h1>Politique de confidentialité</h1>
+
+                <h2>Responsable du traitement</h2>
+                <p><strong>Au Paradis O'Fer</strong><br>
+                    15 Rue de Royon, 62310 Sains-lès-Fressin<br>
+                    Courriel : au.paradis.o.fer@gmail.com</p>
+
+                <h2>Données collectées</h2>
+                <p>Nous collectons les données suivantes :</p>
+                <ul>
+                    <li>Nom et prénom</li>
+                    <li>Adresse e-mail</li>
+                    <li>Numéro de téléphone (si communiqué)</li>
+                    <li>Contenu des messages envoyés via le formulaire de contact</li>
+                </ul>
+
+                <h2>Finalité du traitement</h2>
+                <p>Les données collectées sont utilisées pour :</p>
+                <ul>
+                    <li>Répondre à vos demandes de renseignements</li>
+                    <li>Gérer les réservations de séances</li>
+                    <li>Assurer le suivi de votre dossier</li>
+                    <li>Vous informer de nos actualités (avec votre consentement)</li>
+                </ul>
+
+                <h2>Base légale</h2>
+                <p>Le traitement de vos données repose sur :</p>
+                <ul>
+                    <li>Votre consentement (formulaire de contact)</li>
+                    <li>L'exécution d'un contrat (réservation de séances)</li>
+                    <li>L'intérêt légitime (amélioration de nos services)</li>
+                </ul>
+
+                <h2>Durée de conservation</h2>
+                <p>Vos données sont conservées pendant la durée nécessaire à la réalisation des finalités mentionnées
+                    ci-dessus :</p>
+                <ul>
+                    <li>Données de contact : 3 ans après le dernier contact</li>
+                    <li>Données de réservation : durée légale de conservation comptable</li>
+                </ul>
+
+                <h2>Vos droits</h2>
+                <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+                <ul>
+                    <li>Droit d'accès à vos données</li>
+                    <li>Droit de rectification</li>
+                    <li>Droit à l'effacement</li>
+                    <li>Droit à la limitation du traitement</li>
+                    <li>Droit à la portabilité</li>
+                    <li>Droit d'opposition</li>
+                </ul>
+                <p>Pour exercer ces droits, contactez-nous à : au.paradis.o.fer@gmail.com</p>
+
+                <h2>Destinataires des données</h2>
+                <p>Vos données sont destinées uniquement à l'équipe d'Au Paradis O'Fer. Elles ne sont jamais vendues ni
+                    transmises à des tiers, sauf obligation légale.</p>
+
+                <h2>Sécurité</h2>
+                <p>Nous mettons en œuvre toutes les mesures techniques et organisationnelles appropriées afin de
+                    garantir la sécurité de vos données et empêcher leur déformation, endommagement ou accès par des
+                    tiers non autorisés.</p>
+
+                <h2>Réclamation</h2>
+                <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès
+                    de la CNIL : <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer"
+                        style="color: var(--color-brand-sky);">www.cnil.fr</a></p>
+
+                <p style="margin-top: 2rem;">Voir aussi : <a href="#" onclick="showPage('cookies')"
+                        style="color: var(--color-brand-sky);">Politique cookies</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Au Paradis O'Fer</h3>
+                <p>Centre d'accueil en zoothérapie<br>Médiation animale</p>
+            </div>
+            <div class="footer-section">
+                <h3>Coordonnées</h3>
+                <p>Tél : 06 48 34 22 53<br>
+                    Email : au.paradis.o.fer@gmail.com<br>
+                    15 Rue de Royon<br>62310 Sains-lès-Fressin</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires &amp; Infos</h3>
+                <p>Séances sur réservation<br>
+                    Accueil familial<br>
+                    En semaine, entre 9 h et 18 h</p>
+            </div>
+            <div class="footer-section">
+                <h3>RGPD &amp; Légal</h3>
+                <a href="#" onclick="showPage('mentions')">Mentions légales</a>
+                <a href="#" onclick="showPage('confidentialite')">Politique de confidentialité</a>
+                <a href="#" onclick="showPage('cookies')">Politique cookies</a>
+                <a href="https://www.facebook.com/people/Au-Paradis-OFer/61579988893494/" target="_blank"
+                    rel="noopener noreferrer" class="social-link">
+                    <span>📘</span> Facebook
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Depuis 2025 — Au Paradis O'Fer</p>
+        </div>
+    </footer>
+
+    <!-- Schema.org structured data (pour les rich snippets Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Au Paradis O'Fer",
+      "description": "Centre d'accueil en zoothérapie équine",
+      "url": "https://www.auparadiso-fer.fr",
+      "logo": "https://www.auparadiso-fer.fr/images/logo-sans-fond.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Service client",
+        "availableLanguage": "French"
+      },
+      "sameAs": [
+        "https://www.facebook.com/votre-page-facebook"
+      ]
+    }
+    </script>
+    
+    <!-- Scripts -->
+    <script src="./js/data.js"></script>
+    <script src="./js/cookieManagement.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/renderPages.js"></script>
+    <script src="./js/contactForm.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
