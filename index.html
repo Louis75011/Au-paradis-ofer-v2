@@ -70,18 +70,19 @@
     <!-- Header Navigation -->
     <header>
         <nav>
-            <a href="#accueil">
+            <a href="#accueil" onclick="showPage('accueil'); return false;">
                 <img src="./images/logo-sans-fond.png" alt="Logo Au Paradis O'Fer - Centre de zoothérapie équine"
                     class="logo">
             </a>
             <ul>
-                <li><a href="#apropos">À propos</a></li>
-                <li><a href="#chevaux">Nos chevaux</a></li>
-                <li><a href="#installations">Nos installations</a></li>
-                <li><a href="#seances">Séances</a></li>
-                <li><a href="#gites">Gîtes</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#apropos" onclick="showPage('apropos'); return false;">À propos</a></li>
+                <li><a href="#chevaux" onclick="showPage('chevaux'); return false;">Nos chevaux</a></li>
+                <li><a href="#installations" onclick="showPage('installations'); return false;">Nos installations</a>
+                </li>
+                <li><a href="#seances" onclick="showPage('seances'); return false;">Séances</a></li>
+                <li><a href="#gites" onclick="showPage('gites'); return false;">Gîtes</a></li>
+                <li><a href="#faq" onclick="showPage('faq'); return false;">FAQ</a></li>
+                <li><a href="#contact" onclick="showPage('contact'); return false;">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -96,8 +97,8 @@
                     <h2>Centre d'accueil en zoothérapie</h2>
                     <p>Dans un cadre familial, apaisant et verdoyant.</p>
                     <div class="carousel-btns">
-                        <a href="#" class="btn" onclick="showPage('seances')">Réserver les séances</a>
-                        <a href="#" class="btn btn-secondary" onclick="showPage('contact')">Prendre contact</a>
+                        <button class="btn" onclick="showPage('seances')">Réserver les séances</button>
+                        <button class="btn btn-secondary" onclick="showPage('contact')">Prendre contact</button>
                     </div>
                 </div>
 
@@ -529,19 +530,22 @@
             </div>
             <div class="footer-section">
                 <h3>RGPD &amp; Légal</h3>
-                <a href="#" onclick="showPage('mentions')">Mentions légales</a>
-                <a href="#" onclick="showPage('confidentialite')">Politique de confidentialité</a>
-                <a href="#" onclick="showPage('cookies')">Politique cookies</a>
+                <a href="#mentions" onclick="showPage('mentions'); return false;">Mentions légales</a>
+                <a href="#confidentialite" onclick="showPage('confidentialite'); return false;">Politique de
+                    confidentialité</a>
+                <a href="#cookies" onclick="showPage('cookies'); return false;">Politique cookies</a>
                 <a href="https://www.facebook.com/people/Au-Paradis-OFer/61579988893494/" target="_blank"
                     rel="noopener noreferrer" class="social-link">
                     <span>📘</span> Facebook
                 </a>
             </div>
+
         </div>
         <div class="footer-bottom">
             <p>&copy; Depuis 2025 — Au Paradis O'Fer</p>
         </div>
     </footer>
+
 
     <!-- Schema.org structured data (pour les rich snippets Google) -->
     <script type="application/ld+json">
