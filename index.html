@@ -36,8 +36,12 @@
     <meta property="og:locale" content="fr_FR">
     <!-- Canonical URL (évite le contenu dupliqué) -->
     <link rel="canonical" href="https://au-paradis-ofer.fr/">
+
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <!-- Bibliothèque icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- styles -->
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/header.css">
@@ -296,8 +300,21 @@
         <div id="page-contact" class="page hidden">
             <section>
                 <h1 class="section-title">Contact &amp; Réservation</h1>
+
+                <div id="page-contact">
+                    <section>
+                        <div class="section-intro">
+                            <p>Email : <a href="mailto:au.paradis.o.fer@gmail.com">au.paradis.o.fer@gmail.com</a></p>
+                            <p>Réseaux sociaux <i class="fa-brands fa-facebook-f" aria-hidden="true"></i> : <a
+                                    href="https://www.facebook.com/people/Au-Paradis-OFer/61579988893494/"
+                                    target="_blank" rel="noopener noreferrer" class="social-link">
+                                    <span class="social-text">Facebook</span>
+                                </a></p>
+                        </div>
+                    </section>
+                </div>
+
                 <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
-                    <p style="text-align: right;">Email : <a href="mailto:au.paradis.o.fer@gmail.com">au.paradis.o.fer@gmail.com</a></p>
                     <div class="form-group">
                         <label for="nom">Nom complet *</label>
                         <input type="text" id="nom" name="nom" required>
@@ -534,41 +551,42 @@
         </div>
     </main>
 
-   <!-- Footer -->
-<footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>Au Paradis O'Fer</h3>
-            <p>Centre d'accueil en zoothérapie<br>Médiation animale</p>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Au Paradis O'Fer</h3>
+                <p>Centre d'accueil en zoothérapie<br>Médiation animale</p>
+                <a href="https://www.facebook.com/people/Au-Paradis-OFer/61579988893494/" target="_blank"
+                    rel="noopener noreferrer" class="social-link">
+                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    <span class="social-text">Facebook</span>
+                </a>
+            </div>
+            <div class="footer-section">
+                <h3>Coordonnées</h3>
+                <p>Tél : 06 48 34 22 53<br>
+                    Email : au.paradis.o.fer@gmail.com<br>
+                    15 Rue de Royon<br>62310 Sains-lès-Fressin</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires &amp; Infos</h3>
+                <p>Séances sur réservation<br>
+                    Accueil familial<br>
+                    En semaine, entre 9 h et 18 h</p>
+            </div>
+            <div class="footer-section">
+                <h3>RGPD &amp; Légal</h3>
+                <a href="#mentions" onclick="navigateTo('mentions'); return false;">Mentions légales</a>
+                <a href="#confidentialite" onclick="navigateTo('confidentialite'); return false;">Politique de
+                    confidentialité</a>
+                <a href="#cookies" onclick="navigateTo('cookies'); return false;">Politique cookies</a>
+            </div>
         </div>
-        <div class="footer-section">
-            <h3>Coordonnées</h3>
-            <p>Tél : 06 48 34 22 53<br>
-                Email : au.paradis.o.fer@gmail.com<br>
-                15 Rue de Royon<br>62310 Sains-lès-Fressin</p>
+        <div class="footer-bottom">
+            <p>&copy; Depuis 2025 — Au Paradis O'Fer</p>
         </div>
-        <div class="footer-section">
-            <h3>Horaires &amp; Infos</h3>
-            <p>Séances sur réservation<br>
-                Accueil familial<br>
-                En semaine, entre 9 h et 18 h</p>
-        </div>
-        <div class="footer-section">
-            <h3>RGPD &amp; Légal</h3>
-            <a href="#mentions" onclick="navigateTo('mentions'); return false;">Mentions légales</a>
-            <a href="#confidentialite" onclick="navigateTo('confidentialite'); return false;">Politique de
-                confidentialité</a>
-            <a href="#cookies" onclick="navigateTo('cookies'); return false;">Politique cookies</a>
-            <a href="https://www.facebook.com/people/Au-Paradis-OFer/61579988893494/" target="_blank"
-                rel="noopener noreferrer" class="social-link">
-                <span>📘</span> Facebook
-            </a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; Depuis 2025 — Au Paradis O'Fer</p>
-    </div>
-</footer>
+    </footer>
 
 
 
