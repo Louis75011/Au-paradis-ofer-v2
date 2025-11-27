@@ -42,12 +42,15 @@
 
 .evenement-card.perime {
     opacity: 1;
+    margin-bottom: 8px;
     filter: grayscale(0.3);
 }
 
 .evenement-image {
     width: 100%;
-    aspect-ratio: 9/16;
+    /* height: 480px; Hauteur fixe, adaptée aux images en portrait */
+    /* aspect-ratio: 9/16; */
+    height: 100%;
     object-fit: cover;
     display: block;
 }

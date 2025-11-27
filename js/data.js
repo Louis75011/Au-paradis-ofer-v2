@@ -49,12 +49,6 @@ const evenements = [
         "image": "./images/evenements/bon-au-paradis-ofer-03.jpg"
     },
     {
-        "id": "concours-bonne-chance",
-        "titre": "Concours Bonne Chance",
-        "date": "2024-12-10",
-        "image": "./images/evenements/concours-bonne-chance.jpg"
-    },
-    {
         "id": "poney-ballade",
         "titre": "Ballade à Poney",
         "date": "2025-06-15",
@@ -64,7 +58,7 @@ const evenements = [
         "id": "poney-jeu-de-piste",
         "titre": "Jeu de Piste avec les Poneys",
         "date": "2025-07-20",
-        "image": "./images/evenements/poney-jeu-de-piste-jardin.jpg"
+        "image": "./images/evenements/poney-jeu-de-piste-gardien.jpg"
     },
     {
         "id": "rallye-equestre-mediation",
@@ -277,7 +271,7 @@ const avis = [
         "text": "Très bon après-midi au paradis o'fer"
     },
     {
-        "author": "Roger Lefebvre",
+        "author": "Audrey Jeanne",
         "text": "Très bon accueil, personnes attentionnés et à l'écoute. Nous sommes ravis, ma fille a adoré son après midi avec les poneys. Nous reviendrons très prochainement avec grand plaisir. Merci pour tout ☺"
     },
     {
