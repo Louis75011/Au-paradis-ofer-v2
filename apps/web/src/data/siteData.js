@@ -1,4 +1,8 @@
-// js\data.js
+// apps\web\src\data\siteData.js
+export function readSiteData() {
+    return (typeof window !== "undefined" && window.APO_DATA) ? window.APO_DATA : siteData;
+}
+
 const evenements = [
     {
         "id": "noel-chevaux-2024",
@@ -15,7 +19,7 @@ const evenements = [
     {
         "id": "noel-chevaux-02-2024",
         "titre": "Noel des Chevaux - Rallye",
-        "date": "2024-12-7",
+        "date": "2024-12-07",
         "image": "./images/evenements/noel-des-chevaux-02.jpg"
     },
     {
@@ -335,5 +339,32 @@ const faqData = [
     }
 ];
 
+const pub = (p) => (typeof p === "string" ? p.replace(/^\.\//, "/") : p);
 
-// export { chevaux, installations, tarifs, gites, avis, faqData, evenements };
+const evenementsNormalized = evenements.map((e) => ({
+    ...e,
+    image: pub(e.image),
+}));
+
+const chevauxNormalized = chevaux.map((c) => ({
+    ...c,
+    photo: pub(c.photo),
+}));
+
+const installationsNormalized = {
+    ...installations,
+    elements: installations.elements.map((x) => ({
+        ...x,
+        photos: (x.photos ?? []).map(pub),
+    })),
+};
+
+export const siteData = {
+    evenements: evenementsNormalized,
+    chevaux: chevauxNormalized,
+    installations: installationsNormalized,
+    tarifs,
+    gites,
+    avis,
+    faqData,
+};

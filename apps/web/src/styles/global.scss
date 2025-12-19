@@ -26,11 +26,30 @@ body {
 }
 
 /* Main Container */
-main {
+// main {
+//     max-width: 1400px;
+//     margin: 0 auto;
+//     padding: 2rem;
+// }
+
+/* Page container (partout) */
+.page {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1.25rem 1rem;
 }
+
+@media (min-width: 900px) {
+    .page {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Sections un peu moins espacées */
+section {
+    margin: 1.5rem 0;
+}
+
 
 /* Section Styles */
 section {

@@ -1,5 +1,6 @@
-// apps/web/src/data/useSiteData.js
+// apps\web\src\data\useSiteData.js
 import { useEffect, useMemo, useState } from "react";
+import { siteData } from "./siteData.js";
 
 const EMPTY = Object.freeze({
   evenements: [],
@@ -12,8 +13,9 @@ const EMPTY = Object.freeze({
 });
 
 function readApoData() {
-  const d = window.APO_DATA;
+  const d = (typeof window !== "undefined" && window.APO_DATA) ? window.APO_DATA : siteData;
   if (!d) return EMPTY;
+
   return {
     evenements: d.evenements ?? [],
     chevaux: d.chevaux ?? [],
@@ -31,8 +33,7 @@ export function useSiteData() {
   useEffect(() => {
     const onReady = () => setData(readApoData());
 
-    // cas où data.js est déjà chargé
-    if (window.APO_DATA) onReady();
+    if (typeof window !== "undefined" && window.APO_DATA) onReady();
 
     window.addEventListener("apo:data:ready", onReady);
     return () => window.removeEventListener("apo:data:ready", onReady);

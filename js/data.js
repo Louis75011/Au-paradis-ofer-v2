@@ -1,4 +1,4 @@
-// js\data.js
+// js\data.js js\data.js
 const evenements = [
     {
         "id": "noel-chevaux-2024",

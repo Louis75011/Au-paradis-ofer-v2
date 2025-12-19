@@ -45,7 +45,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; Depuis 2025 — Au Paradis O&apos;Fer</p>
+        <p>&copy; Depuis 2025 — Au Paradis O&apos;Fer — Propulsé par Arx Sytema</p>
       </div>
     </footer>
   );

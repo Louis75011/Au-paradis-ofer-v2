@@ -5,26 +5,21 @@ import Header from "./components/layout/Header.jsx";
 import Footer from "./components/layout/Footer.jsx";
 import DevRouteBadge from "./components/dev/DevRouteBadge.jsx";
 
-function useLegacyScripts() {
+function useLegacyScripts(scripts = []) {
   useEffect(() => {
-    const scripts = [
-      "/js/data.js",
-      "/js/cookieManagement.js",
-      "/js/carousel.js",
-      "/js/evenements.js",
-      // "/js/contactForm.js", // inutile dès qu’on gère le submit en React
-    ];
+    if (!scripts.length) return;
 
     const nodes = scripts.map((src) => {
       const s = document.createElement("script");
       s.src = src;
       s.async = false;
+      // s.type = "module"; // à activer si vos scripts legacy utilisent import/export
       document.body.appendChild(s);
       return s;
     });
 
     return () => nodes.forEach((n) => n.remove());
-  }, []);
+  }, [scripts]);
 }
 
 export default function App() {
