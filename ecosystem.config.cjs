@@ -10,16 +10,14 @@ module.exports = {
         NODE_ENV: "development",
         PORT: 3000,
         LOG_LEVEL: "debug",
-        CORS_ORIGIN: "http://localhost:5175",
-        APO_ENV_FILE: ".env.preprod"
+        CORS_ORIGIN: "http://localhost:5175"
       },
       env_production: {
         NODE_ENV: "production",
         PORT: 3000,
         LOG_LEVEL: "info",
         CORS_ORIGIN: "https://au-paradis-ofer.fr",
-        PUBLIC_SITE_URL: "https://au-paradis-ofer.fr",
-        APO_ENV_FILE: ".env.production"
+        PUBLIC_SITE_URL: "https://au-paradis-ofer.fr"
       }
     }
   ]
