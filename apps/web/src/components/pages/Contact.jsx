@@ -1,4 +1,6 @@
 // apps/web/src/components/pages/Contact.jsx
+import "../../styles/components/contact-form.scss";
+
 export default function Contact() {
   const onSubmit = (event) => {
     event.preventDefault();

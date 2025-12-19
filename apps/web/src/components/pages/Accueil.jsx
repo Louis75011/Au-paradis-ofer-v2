@@ -2,6 +2,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { useSiteData } from "../../data/useSiteData.js";
 import { NavLink } from "react-router-dom";
+import "../../styles/components/carousel.scss";
+import "../../styles/pages/evenements.scss";
+import "../../styles/pages/styles-pages.scss";
 
 export default function Accueil() {
     const { avis, evenements } = useSiteData();

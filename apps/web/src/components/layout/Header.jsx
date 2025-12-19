@@ -1,6 +1,7 @@
 // apps/web/src/components/layout/Header.jsx
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
+import "../../styles/components/header.scss";
 
 export default function Header() {
   useEffect(() => {

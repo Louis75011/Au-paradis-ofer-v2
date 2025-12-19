@@ -1,6 +1,7 @@
 // apps/web/src/components/pages/Seances.jsx
 import { useSiteData } from "../../data/useSiteData.js";
 import { NavLink } from "react-router-dom";
+import "../../styles/pages/styles-pages.scss";
 
 export default function Seances() {
   const { tarifs } = useSiteData();

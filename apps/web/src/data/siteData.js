@@ -336,4 +336,4 @@ const faqData = [
 ];
 
 
-export { chevaux, installations, tarifs, gites, avis, faqData, evenements };
+// export { chevaux, installations, tarifs, gites, avis, faqData, evenements };

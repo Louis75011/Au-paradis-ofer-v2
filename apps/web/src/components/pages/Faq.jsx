@@ -1,6 +1,7 @@
 // apps/web/src/components/pages/Faq.jsx
 import { useState } from "react";
 import { useSiteData } from "../../data/useSiteData.js";
+import "../../styles/pages/styles-pages.scss";
 
 export default function Faq() {
   const { faqData } = useSiteData();

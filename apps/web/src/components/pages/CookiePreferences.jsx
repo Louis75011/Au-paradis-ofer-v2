@@ -1,4 +1,6 @@
 // apps/web/src/components/pages/CookiePreferences.jsx
+import "../../styles/components/cookie-consent.scss";
+
 export default function CookiePreferences() {
   return (
     <div className="page">

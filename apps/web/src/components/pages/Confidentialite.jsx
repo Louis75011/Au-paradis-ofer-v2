@@ -1,5 +1,6 @@
 // apps/web/src/components/pages/Confidentialite.jsx
 import { Link } from "react-router-dom";
+import "../../styles/pages/legal-pages.scss";
 
 export default function Confidentialite() {
   return (

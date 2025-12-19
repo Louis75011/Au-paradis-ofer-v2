@@ -344,3 +344,6 @@ window.APO_DATA = {
     avis,
     faqData,
 };
+
+// Optionnel : signal pour React (si vous voulez déclencher un refresh sans polling)
+window.dispatchEvent(new Event("apo:data:ready"));

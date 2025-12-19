@@ -1,5 +1,6 @@
 // apps/web/src/components/pages/Gites.jsx
 import { useSiteData } from "../../data/useSiteData.js";
+import "../../styles/pages/styles-pages.scss";
 
 export default function Gites() {
   const { gites } = useSiteData();

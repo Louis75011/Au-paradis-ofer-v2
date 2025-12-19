@@ -14,11 +14,9 @@ const EMPTY = Object.freeze({
 function readApoData() {
   const d = window.APO_DATA;
   if (!d) return EMPTY;
-
   return {
     evenements: d.evenements ?? [],
     chevaux: d.chevaux ?? [],
-    // selon votre ancien data.js : parfois { elements: [...] }
     installations: d.installations?.elements ?? d.installations ?? [],
     tarifs: d.tarifs ?? [],
     gites: d.gites ?? [],
@@ -31,20 +29,14 @@ export function useSiteData() {
   const [data, setData] = useState(() => readApoData());
 
   useEffect(() => {
-    // data.js est injecté après mount -> on “attend” qu’il existe
-    let tries = 0;
-    const id = window.setInterval(() => {
-      tries += 1;
-      const next = readApoData();
-      if (window.APO_DATA || tries > 50) {
-        setData(next);
-        window.clearInterval(id);
-      }
-    }, 50);
+    const onReady = () => setData(readApoData());
 
-    return () => window.clearInterval(id);
+    // cas où data.js est déjà chargé
+    if (window.APO_DATA) onReady();
+
+    window.addEventListener("apo:data:ready", onReady);
+    return () => window.removeEventListener("apo:data:ready", onReady);
   }, []);
 
-  // mémo optionnel : on renvoie une référence stable
   return useMemo(() => data, [data]);
 }

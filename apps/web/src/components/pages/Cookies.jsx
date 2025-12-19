@@ -1,4 +1,6 @@
 // apps/web/src/components/pages/Cookies.jsx
+import "../../styles/components/cookie-consent.scss";
+import "../../styles/pages/legal-pages.scss";
 import { Link } from "react-router-dom";
 
 export default function Cookies() {
