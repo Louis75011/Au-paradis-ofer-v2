@@ -15,7 +15,7 @@ export default function Chevaux() {
         <div className="cards-grid">
           {chevaux.map((cheval) => (
             <div className="card" key={cheval.nom}>
-              <img src={cheval.photo} alt={cheval.nom} className="card-image" />
+              <img src={cheval.photo} alt={cheval.nom} className="card-media" />
               <div className="card-content">
                 <h3 className="card-title">{cheval.nom}</h3>
                 <p className="card-meta">{cheval.type} • {cheval.race} • {cheval.age} ans</p>

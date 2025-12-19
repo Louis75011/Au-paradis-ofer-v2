@@ -18,7 +18,9 @@ export default function Installations() {
                     {installations.map((it) => (
                         <div className="card" key={it.nom}>
                             {it.photos?.length ? (
-                                <img src={it.photos[0]} alt={it.nom} className="card-image" />
+                                <div className="card-media">
+                                    <img src={it.photos[0]} alt={it.nom} className="card-image" loading="lazy" decoding="async" />
+                                </div>
                             ) : null}
 
                             <div className="card-content">

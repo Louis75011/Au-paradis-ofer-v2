@@ -16,11 +16,29 @@ import Cookies from "../components/pages/Cookies.jsx";
 import Confidentialite from "../components/pages/Confidentialite.jsx";
 import CookiePreferences from "../components/pages/CookiePreferences.jsx";
 
+import NotFound from "../components/pages/NotFound.jsx";
+
+// routes.jsx
+import { useRouteError, isRouteErrorResponse, NavLink } from "react-router-dom";
+
 function RouteError() {
+    const err = useRouteError();
+
+    const title = isRouteErrorResponse(err)
+        ? `Erreur ${err.status}`
+        : "Erreur inattendue";
+
+    const detail = isRouteErrorResponse(err)
+        ? err.statusText
+        : (err?.message ?? "Consultez la console pour le détail.");
+
     return (
-        <div style={{ padding: 24 }}>
-            <h2>Erreur de navigation</h2>
-            <p>Vérifiez la console et la configuration des routes.</p>
+        <div className="page">
+            <h1 className="section-title">{title}</h1>
+            <p className="section-intro">{detail}</p>
+            <div style={{ textAlign: "center" }}>
+                <NavLink className="btn" to="/">Retour à l’accueil</NavLink>
+            </div>
         </div>
     );
 }
@@ -44,6 +62,9 @@ export const router = createBrowserRouter([
             { path: "cookies", element: <Cookies /> },
             { path: "confidentialite", element: <Confidentialite /> },
             { path: "preferences-cookies", element: <CookiePreferences /> },
+
+            // 404 (doit rester en dernier)
+            { path: "*", element: <NotFound /> },
         ],
     },
 ]);

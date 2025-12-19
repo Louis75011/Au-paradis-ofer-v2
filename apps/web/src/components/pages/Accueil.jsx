@@ -1,8 +1,7 @@
 // apps/web/src/components/pages/Accueil.jsx
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useSiteData } from "../../data/useSiteData.js";
-
 import "../../styles/components/carousel.scss";
 import "../../styles/pages/evenements.scss";
 import "../../styles/pages/styles-pages.scss";
@@ -38,16 +37,76 @@ export default function Accueil() {
 
   const [slideIndex, setSlideIndex] = useState(0);
 
-  useEffect(() => {
+  // Auto + pause (hover/focus/touch)
+  const intervalRef = useRef(null);
+  const pausedRef = useRef(false);
+
+  const stopAuto = () => {
+    if (intervalRef.current) window.clearInterval(intervalRef.current);
+    intervalRef.current = null;
+  };
+
+  const startAuto = () => {
+    stopAuto();
     if (!slides.length) return;
-    const id = window.setInterval(() => {
+    intervalRef.current = window.setInterval(() => {
+      if (pausedRef.current) return;
       setSlideIndex((i) => (i + 1) % slides.length);
     }, 6000);
-    return () => window.clearInterval(id);
+  };
+
+  useEffect(() => {
+    startAuto();
+    return stopAuto;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slides.length]);
 
-  const prev = () => setSlideIndex((i) => (i - 1 + slides.length) % slides.length);
-  const next = () => setSlideIndex((i) => (i + 1) % slides.length);
+  const safeSetIndex = (nextIndex) => {
+    if (!slides.length) return;
+    const n = slides.length;
+    const v = ((nextIndex % n) + n) % n;
+    setSlideIndex(v);
+    startAuto();
+  };
+
+  const prev = () => safeSetIndex(slideIndex - 1);
+  const next = () => safeSetIndex(slideIndex + 1);
+
+  const onKeyDownCarousel = (e) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      prev();
+    }
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      next();
+    }
+  };
+
+  // Swipe (mobile)
+  const touchStartX = useRef(0);
+  const touchDeltaX = useRef(0);
+
+  const onTouchStart = (e) => {
+    pausedRef.current = true;
+    touchStartX.current = e.touches?.[0]?.clientX ?? 0;
+    touchDeltaX.current = 0;
+  };
+
+  const onTouchMove = (e) => {
+    const x = e.touches?.[0]?.clientX ?? 0;
+    touchDeltaX.current = x - touchStartX.current;
+  };
+
+  const onTouchEnd = () => {
+    const dx = touchDeltaX.current;
+    pausedRef.current = false;
+
+    if (Math.abs(dx) > 40) {
+      if (dx > 0) prev();
+      else next();
+    }
+  };
 
   // Événements
   const [showAllEvents, setShowAllEvents] = useState(false);
@@ -78,24 +137,43 @@ export default function Accueil() {
           </div>
         </div>
 
-        <div className="carousel" aria-label="Carrousel accueil">
-          {slides.map((it, i) => (
-            <div
-              className="carousel-slide"
-              key={it.src}
-              style={{ display: i === slideIndex ? "block" : "none" }}
-              aria-hidden={i !== slideIndex}
-            >
-              <img src={it.src} alt={it.alt} />
-            </div>
-          ))}
+        <div
+          className="carousel"
+          aria-label="Carrousel accueil"
+          tabIndex={0}
+          onKeyDown={onKeyDownCarousel}
+          onMouseEnter={() => (pausedRef.current = true)}
+          onMouseLeave={() => (pausedRef.current = false)}
+          onFocusCapture={() => (pausedRef.current = true)}
+          onBlurCapture={() => (pausedRef.current = false)}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
+          <div className="carousel-track" style={{ transform: `translate3d(-${slideIndex * 100}%, 0, 0)` }}>
+            {slides.map((it, i) => (
+              <div
+                className={`carousel-slide ${i === slideIndex ? "is-active" : ""}`}
+                key={it.src}
+                aria-hidden={i !== slideIndex}
+              >
+                <img
+                  src={it.src}
+                  alt={it.alt}
+                  loading={i === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  draggable="false"
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="carousel-nav">
-          <button type="button" onClick={prev} aria-label="Image précédente">
+          <button type="button" onClick={prev} aria-label="Image précédente" disabled={!slides.length}>
             ‹
           </button>
-          <button type="button" onClick={next} aria-label="Image suivante">
+          <button type="button" onClick={next} aria-label="Image suivante" disabled={!slides.length}>
             ›
           </button>
         </div>
@@ -103,17 +181,12 @@ export default function Accueil() {
 
       <div className="carousel-indicators" aria-label="Indicateurs carrousel">
         {slides.map((_, i) => (
-          <span
+          <button
             key={i}
+            type="button"
             className={i === slideIndex ? "active" : ""}
-            onClick={() => setSlideIndex(i)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") setSlideIndex(i);
-            }}
-            role="button"
-            tabIndex={0}
+            onClick={() => safeSetIndex(i)}
             aria-label={`Aller à l’image ${i + 1}`}
-            style={{ cursor: "pointer" }}
           />
         ))}
       </div>
@@ -201,7 +274,6 @@ export default function Accueil() {
         <div
           className={`modal-evenements modal-detail-evenement ${detail ? "active" : ""}`}
           onClick={(e) => {
-            // clic hors contenu => ferme
             if (e.target.classList?.contains("modal-detail-evenement")) closeDetail();
           }}
           aria-hidden={!detail}

@@ -1,3 +1,4 @@
+// apps\web\src\components\layout\MobileMenu.jsx
 export default function MobileMenu() {
   const go = (key) => (e) => {
     e.preventDefault();
