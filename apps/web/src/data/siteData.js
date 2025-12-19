@@ -197,55 +197,63 @@ const tarifs = [
         "id": 1,
         "intitule": "Séance individuelle",
         "duree": "1h (environ)",
-        "prix": 50
+        "prix": 50,
+        "bookingUrl": "https://calendar.app.google/XXXXX"  // schedule spécifique à créer / coller ici
     },
     {
         "id": 2,
         "intitule": "Forfait 5 séances individuelles",
         "duree": "5x1h (environ)",
         "prix": 225,
-        "note": "soit la 5ème séance à moitié prix"
+        "note": "soit la 5ème séance à moitié prix",
+        "bookingUrl": "https://calendar.app.google/8Brih1aWpmrgaTZ56"  // optionnel : schedule spécifique pour le forfait
     },
     {
         "id": 3,
         "intitule": "Forfait 10 séances individuelles",
         "duree": "10x1h (environ)",
         "prix": 450,
-        "note": "soit la 10ème séance offerte"
+        "note": "soit la 10ème séance offerte",
+        "bookingUrl": "https://calendar.app.google/ZZZZZ"  // optionnel
     },
     {
         "id": 4,
         "intitule": "Séance 2 personnes",
         "duree": "1h15 (environ)",
-        "prix": 80
+        "prix": 80,
+        "bookingUrl": "https://calendar.app.google/AAAAA"  // schedule spécifique “duo”
     },
     {
         "id": 5,
         "intitule": "Forfait groupes",
         "duree": "1h30 (environ)",
         "prix": 140,
-        "note": "par groupe de 4, +35 € par personne en plus"
+        "note": "par groupe de 4, +35 € par personne en plus",
+        "bookingUrl": "https://calendar.app.google/BBBBB"  // schedule pour groupes (adultes)
     },
     {
         "id": 6,
         "intitule": "Forfait famille",
         "duree": "1h30 (environ)",
         "prix": 120,
-        "note": "pour 3 personnes (140 € pour 4, +35 € par personne en plus)"
+        "note": "pour 3 personnes (140 € pour 4, +35 € par personne en plus)",
+        "bookingUrl": "https://calendar.app.google/CCCCC"  // schedule “famille”
     },
     {
         "id": 7,
         "intitule": "Forfait école",
         "duree": "2h (environ)",
         "prix": 250,
-        "note": "par groupe de 6 enfants, +25 € par enfant en plus"
+        "note": "par groupe de 6 enfants, +25 € par enfant en plus",
+        "bookingUrl": "https://calendar.app.google/DDDDD"  // schedule “scolaire”
     },
     {
         "id": 8,
         "intitule": "Séances découverte enfants",
         "duree": "3h (mercredis et samedis, 14h-17h)",
         "prix": 33,
-        "note": "à partir de 3 ans, jeux avec les poneys, goûter offert, 6 enfants max"
+        "note": "à partir de 3 ans, jeux avec les poneys, goûter offert, 6 enfants max",
+        "bookingUrl": "https://calendar.app.google/EEEEE"  // schedule dédié “découverte enfants”
     }
 ];
 

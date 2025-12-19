@@ -29,10 +29,8 @@ export default function Seances() {
                 <a className="btn btn-cream" href={bookingUrl} target="_blank" rel="noreferrer">
                   Réserver
                 </a>
-              </div>
 
-              <div className="tarif-contact">
-                <NavLink className="btn btn-secondary" to="/contact" style={{ width: "100%", display: "inline-block", textAlign: "center" }}>
+                <NavLink className="btn btn-secondary" to="/contact">
                   Contact
                 </NavLink>
               </div>

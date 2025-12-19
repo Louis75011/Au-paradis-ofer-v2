@@ -12,7 +12,6 @@ async function createCheckoutSession({ priceKey }) {
 
   if (!res.ok) {
     const txt = await res.text().catch(() => "");
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     throw new Error(`Checkout error (${res.status}) ${txt}`);
   }
   return res.json();
@@ -33,7 +32,7 @@ export default function Gites() {
       const { url } = await createCheckoutSession({ priceKey });
       window.location.assign(url);
     } catch (e) {
-      alert("Paiement indisponible pour le moment. Veuillez nous contacter.");
+      alert(e?.message || "Paiement indisponible pour le moment. Veuillez nous contacter.");
       console.error(e);
     }
   };
@@ -54,8 +53,8 @@ export default function Gites() {
 
         <div className="section-intro">
           <p>Nous préparons un hébergement simple et chaleureux sur place pour prolonger l&apos;expérience au contact des chevaux.<br />
-          Informations, photos et réservation arriveront bientôt.<br />
-          Pour le moment, la réservation se fait par contact ; le paiement en ligne sera disponible dès l’ouverture.</p>
+            Informations, photos et réservation arriveront bientôt.<br />
+            La réservation se fera par contact.</p>
           {/* <p>À terme, les réservations en ligne seront possibles ; pour le moment, n&apos;hésitez pas à prendre contact avec nous pour en savoir plus sur nos avancées.</p> */}
         </div>
 
@@ -87,9 +86,9 @@ export default function Gites() {
                   Contact
                 </a>
 
-                <button type="button" className="btn btn-cream" onClick={() => onPay(g)}>
+                {/* <button type="button" className="btn btn-cream" onClick={() => onPay(g)}>
                   Payer
-                </button>
+                </button> */}
 
               </div>
             </div>

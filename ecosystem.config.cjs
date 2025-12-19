@@ -14,7 +14,7 @@ module.exports = {
         NODE_ENV: "development",
         PORT: 3000,
         LOG_LEVEL: "debug",
-        CORS_ORIGIN: "http://localhost:5173"
+        CORS_ORIGIN: "http://localhost:5174"
       },
 
       // Prod : NE METTEZ PAS les vraies clés ici si vous commitez ce fichier.
