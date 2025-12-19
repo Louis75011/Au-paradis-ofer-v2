@@ -334,3 +334,13 @@ const faqData = [
         "answer": "Oui, nous organisons des animations équestres pour les anniversaires d'enfants. Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé."
     }
 ];
+
+window.APO_DATA = {
+    evenements,
+    chevaux,
+    installations,
+    tarifs,
+    gites,
+    avis,
+    faqData,
+};

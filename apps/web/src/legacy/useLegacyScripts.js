@@ -7,10 +7,10 @@ export function useLegacyScripts() {
       "/js/data.js",
       "/js/cookieManagement.js",
       "/js/carousel.js",
-      "/js/renderPages.js",
+      // "/js/renderPages.js",
       "/js/contactForm.js",
       "/js/evenements.js",
-      "/js/main.js",
+      // "/js/main.js",
     ];
 
     const nodes = scripts.map((src) => {

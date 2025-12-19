@@ -1,29 +1,8 @@
-// apps/web/src/components/pages/Gites.jsx — path: /gites
+// apps/web/src/components/pages/Gites.jsx
 import { useMemo } from "react";
-import { Link } from "react-router-dom";
-import { getLegacy } from "../../app/legacyData.js";
-
-function GiteCard({ gite }) {
-  return (
-    <div className="tarif-card">
-      <div className="tarif-title">{gite.intitule}</div>
-      <div className="tarif-duree">{gite.duree}</div>
-      <div className="tarif-prix">{gite.prix} {gite.unite}</div>
-
-      {gite.capaciteMax ? <div className="tarif-note">Capacité max : {gite.capaciteMax} personnes</div> : null}
-      {gite.note ? <div className="tarif-note">{gite.note}</div> : null}
-
-      <div className="tarif-contact">
-        <Link className="btn btn-secondary" to="/contact" style={{ width: "100%" }}>
-          Contact
-        </Link>
-      </div>
-    </div>
-  );
-}
 
 export default function Gites() {
-  const { gites } = useMemo(() => getLegacy(), []);
+  const gites = useMemo(() => window.APO_DATA?.gites ?? [], []);
 
   return (
     <div className="page">
@@ -50,14 +29,22 @@ export default function Gites() {
 
         <div className="tarifs-grid" style={{ marginTop: "3rem" }}>
           {gites.map((g) => (
-            <GiteCard key={`${g.intitule}-${g.duree}`} gite={g} />
-          ))}
-        </div>
+            <div className="tarif-card" key={g.intitule}>
+              <div className="tarif-title">{g.intitule}</div>
+              <div className="tarif-duree">{g.duree}</div>
+              <div className="tarif-prix">
+                {g.prix} {g.unite}
+              </div>
+              {g.capaciteMax ? <div className="tarif-note">Capacité max : {g.capaciteMax} personnes</div> : null}
+              {g.note ? <div className="tarif-note">{g.note}</div> : null}
 
-        <div style={{ maxWidth: 520, margin: "2rem auto 0" }}>
-          <Link className="btn btn-secondary" to="/contact" style={{ width: "100%" }}>
-            Prendre contact
-          </Link>
+              <div className="tarif-contact">
+                <a className="btn btn-secondary" href="/contact" style={{ width: "100%", display: "inline-block" }}>
+                  Contact
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>

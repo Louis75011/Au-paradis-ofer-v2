@@ -39,7 +39,7 @@ export default function Footer() {
           <Link to="/mentions">Mentions légales</Link>
           <Link to="/confidentialite">Politique de confidentialité</Link>
           <Link to="/cookies">Politique cookies</Link>
-          <Link to="/cookie-preferences">Préférences cookies</Link>
+          <Link to="/preferences-cookies">Préférences cookies</Link>
         </div>
       </div>
 
