@@ -25,13 +25,6 @@ body {
     line-height: 1.6;
 }
 
-/* Main Container */
-// main {
-//     max-width: 1400px;
-//     margin: 0 auto;
-//     padding: 2rem;
-// }
-
 .app-main {
     min-height: calc(100vh - var(--header-height, 84px) - var(--footer-height, 260px));
 }
@@ -304,4 +297,14 @@ section {
 .btn-outline:hover {
     filter: none;
     background: rgba(55, 101, 52, 0.08);
+}
+
+.btn-cream {
+    background: var(--color-brand-cream);
+    color: var(--color-brand-very-dark);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+.btn-cream:hover {
+    filter: brightness(0.98);
 }

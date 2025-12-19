@@ -62,7 +62,17 @@
 }
 
 .tarif-contact {
-    margin-top: 1.5rem;
+    // margin-top: 1.5rem;
+    margin-top: auto; // pousse les boutons en bas de carte
+    display: grid;
+    gap: 0.75rem;
+    padding-top: 1rem;
+}
+
+.tarif-contact .btn,
+.tarif-contact a.btn,
+.tarif-contact button.btn {
+    width: 100%;
 }
 
 /* CHEVAUX : images un peu plus hautes */

@@ -256,7 +256,8 @@ const gites = [
         "duree": "1 nuit",
         "prix": 95,
         "unite": "€/nuit",
-        "capaciteMax": 6
+        "capaciteMax": 6,
+        stripePriceKey: "GITE_BASIC"
     },
     {
         "id": 2,
@@ -265,7 +266,8 @@ const gites = [
         "prix": 130,
         "unite": "€/nuit/personne",
         "capaciteMax": 6,
-        "note": "+35 € par personne en plus / nuit"
+        "note": "+35 € par personne en plus / nuit",
+        stripePriceKey: "GITE_PLUS"
     }
 ];
 

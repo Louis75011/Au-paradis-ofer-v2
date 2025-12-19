@@ -2,8 +2,50 @@
 import { useSiteData } from "../../data/useSiteData.js";
 import "../../styles/pages/styles-pages.scss";
 
+async function createCheckoutSession({ priceKey }) {
+  const baseUrl = import.meta.env.VITE_API_BASE_URL;
+  const res = await fetch(`${baseUrl}/checkout/gite`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ priceKey }),
+  });
+
+  if (!res.ok) {
+    const txt = await res.text().catch(() => "");
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    throw new Error(`Checkout error (${res.status}) ${txt}`);
+  }
+  return res.json();
+}
+
 export default function Gites() {
   const { gites } = useSiteData();
+
+  const onPay = async (g) => {
+    // Convention : mappez vos offres sur 2 clés
+    const priceKey = g.stripePriceKey;
+    if (!priceKey) {
+      alert("Paiement indisponible : formule non configurée.");
+      return;
+    }
+
+    try {
+      const { url } = await createCheckoutSession({ priceKey });
+      window.location.assign(url);
+    } catch (e) {
+      alert("Paiement indisponible pour le moment. Veuillez nous contacter.");
+      console.error(e);
+    }
+  };
+
+  //   {
+  //   intitule: "Sans séance",
+  //   duree: "1 nuit",
+  //   prix: "95",
+  //   unite: "€/nuit",
+  //   stripePriceKey: "GITE_BASIC"
+  // }
+  // const priceKey = g.stripePriceKey;
 
   return (
     <div className="page">
@@ -11,9 +53,10 @@ export default function Gites() {
         <h1 className="section-title">Gîte – prochainement</h1>
 
         <div className="section-intro">
-          <p>Nous préparons un hébergement simple et chaleureux sur place pour prolonger l&apos;expérience au contact des chevaux.</p>
-          <p>Informations, photos et réservation arriveront bientôt.</p>
-          <p>À terme, les réservations en ligne seront possibles ; pour le moment, n&apos;hésitez pas à prendre contact avec nous pour en savoir plus sur nos avancées.</p>
+          <p>Nous préparons un hébergement simple et chaleureux sur place pour prolonger l&apos;expérience au contact des chevaux.<br />
+          Informations, photos et réservation arriveront bientôt.<br />
+          Pour le moment, la réservation se fait par contact ; le paiement en ligne sera disponible dès l’ouverture.</p>
+          {/* <p>À terme, les réservations en ligne seront possibles ; pour le moment, n&apos;hésitez pas à prendre contact avec nous pour en savoir plus sur nos avancées.</p> */}
         </div>
 
         <div style={{ textAlign: "center", margin: "2rem 0" }}>
@@ -43,6 +86,11 @@ export default function Gites() {
                 <a className="btn btn-secondary" href="/contact" style={{ width: "100%", display: "inline-block" }}>
                   Contact
                 </a>
+
+                <button type="button" className="btn btn-cream" onClick={() => onPay(g)}>
+                  Payer
+                </button>
+
               </div>
             </div>
           ))}

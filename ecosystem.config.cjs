@@ -24,7 +24,9 @@ module.exports = {
         NODE_ENV: "production",
         PORT: 3000,
         LOG_LEVEL: "info",
-        CORS_ORIGIN: "https://au-paradis-ofer.fr"
+        // CORS_ORIGIN: "https://au-paradis-ofer.fr",
+        CORS_ORIGIN: "https://au-paradis-ofer.fr",
+        PUBLIC_SITE_URL: "https://au-paradis-ofer.fr",
       }
     }
   ]
