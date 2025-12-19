@@ -102,10 +102,11 @@ section {
 
 .card-media {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     /* ajustez : 1/1, 16/9, 3/2... */
     background: var(--color-brand-cream);
-    border-radius: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
     overflow: hidden;
     display: grid;
     place-items: center;

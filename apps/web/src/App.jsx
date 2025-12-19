@@ -4,6 +4,7 @@ import Header from "./components/layout/Header.jsx";
 import Footer from "./components/layout/Footer.jsx";
 import DevRouteBadge from "./components/dev/DevRouteBadge.jsx";
 import CookieBanner from "./components/cookies/CookieBanner.jsx";
+import ScrollToTop from "./components/routing/ScrollToTop.jsx";
 
 export default function App() {
   return (
@@ -13,10 +14,11 @@ export default function App() {
       {/* Bannière cookies : s’affiche seulement si pas de choix */}
       <CookieBanner />
 
+      <ScrollToTop />
       <Header />
-           <main className="app-main">
-       <Outlet />
-     </main>
+      <main className="app-main">
+        <Outlet />
+      </main>
       <Footer />
     </>
   );

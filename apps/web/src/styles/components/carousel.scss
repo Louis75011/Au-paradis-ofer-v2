@@ -100,34 +100,6 @@
     pointer-events: auto;
 }
 
-/* On scope les boutons AU carrousel pour éviter de casser le reste du site */
-// .carousel-overlay-persistent .btn {
-//   background-color: var(--color-brand-sky);
-//   color: var(--color-white);
-//   padding: 0.85rem 1.6rem;
-//   border: none;
-//   border-radius: 10px;
-//   cursor: pointer;
-//   font-weight: 700;
-//   text-decoration: none;
-//   display: inline-block;
-//   transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-//   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-// }
-
-// .carousel-overlay-persistent .btn:hover {
-//   background-color: #017a98;
-//   transform: translateY(-1px) scale(1.03);
-// }
-
-// .carousel-overlay-persistent .btn-secondary {
-//   background-color: var(--color-brand-dark);
-// }
-
-// .carousel-overlay-persistent .btn-secondary:hover {
-//   background-color: var(--color-brand-light);
-// }
-
 /* Navigation */
 .carousel-nav {
     position: absolute;
@@ -266,10 +238,6 @@
         width: 22px;
     }
 }
-
-// .carousel-slide img {
-//     height: 300px;
-// }
 
 /* Base */
 .carousel-container {
