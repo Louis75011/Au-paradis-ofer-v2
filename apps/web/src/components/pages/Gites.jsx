@@ -1,41 +1,43 @@
 // apps/web/src/components/pages/Gites.jsx
 import { useSiteData } from "../../data/useSiteData.js";
 import "../../styles/pages/styles-pages.scss";
+import { NavLink } from "react-router-dom";
 
-async function createCheckoutSession({ priceKey }) {
-  const baseUrl = import.meta.env.VITE_API_BASE_URL;
-  const res = await fetch(`${baseUrl}/checkout/gite`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ priceKey }),
-  });
+// 1. Gîte - Nuit + Séance individuelle (130,00 €)
+// Price ID : price_1Sg6oyJTUtTuEuVMNUf6oo7X
+// 2. Gîte - Nuit sans séance (95,00 €)
+// Price ID : price_1Sg6nlJTUtTuEuVMrB3GYDYZ
 
-  if (!res.ok) {
-    const txt = await res.text().catch(() => "");
-    throw new Error(`Checkout error (${res.status}) ${txt}`);
-  }
-  return res.json();
-}
+// async function createCheckoutSession({ priceKey }) {
+//   const baseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+//   const res = await fetch(`${baseUrl}/api/checkout/gite`, {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify({ priceKey }),
+//   });
+
+//   if (!res.ok) {
+//     const txt = await res.text().catch(() => "");
+//     throw new Error(`Checkout error (${res.status}) ${txt}`);
+//   }
+//   return res.json();
+// }
 
 export default function Gites() {
   const { gites } = useSiteData();
 
-  const onPay = async (g) => {
-    // Convention : mappez vos offres sur 2 clés
-    const priceKey = g.stripePriceKey;
-    if (!priceKey) {
-      alert("Paiement indisponible : formule non configurée.");
+  const onPay = (g) => {
+    const link = g?.stripePaymentLink;
+
+    if (!link) {
+      alert("Paiement indisponible : lien Stripe manquant.");
+      console.error("[gites] stripePaymentLink manquant pour", g);
       return;
     }
 
-    try {
-      const { url } = await createCheckoutSession({ priceKey });
-      window.location.assign(url);
-    } catch (e) {
-      alert(e?.message || "Paiement indisponible pour le moment. Veuillez nous contacter.");
-      console.error(e);
-    }
+    window.location.assign(link);
   };
+
 
   //   {
   //   intitule: "Sans séance",
@@ -54,7 +56,7 @@ export default function Gites() {
         <div className="section-intro">
           <p>Nous préparons un hébergement simple et chaleureux sur place pour prolonger l&apos;expérience au contact des chevaux.<br />
             Informations, photos et réservation arriveront bientôt.<br />
-            La réservation se fera par contact.</p>
+            La réservation se fera d'abord par la section contact.</p>
           {/* <p>À terme, les réservations en ligne seront possibles ; pour le moment, n&apos;hésitez pas à prendre contact avec nous pour en savoir plus sur nos avancées.</p> */}
         </div>
 
@@ -82,13 +84,13 @@ export default function Gites() {
               {g.note ? <div className="tarif-note">{g.note}</div> : null}
 
               <div className="tarif-contact">
-                <a className="btn btn-secondary" href="/contact" style={{ width: "100%", display: "inline-block" }}>
+                <NavLink className="btn btn-secondary" to="/contact" style={{ width: "100%", display: "inline-block" }}>
                   Contact
-                </a>
+                </NavLink>
 
-                {/* <button type="button" className="btn btn-cream" onClick={() => onPay(g)}>
+                <button type="button" className="btn btn-cream" onClick={() => onPay(g)}>
                   Payer
-                </button> */}
+                </button>
 
               </div>
             </div>

@@ -51,7 +51,7 @@ export default function Contact() {
       setStatus({
         loading: false,
         ok: false,
-        message: "Le service d’envoi est indisponible. Vous pouvez envoyer via votre messagerie.",
+        message: "Le service d’envoi est immédiatement indisponible. Vous pouvez envoyer votre message via votre messagerie : au.paradis.o.fer@gmail.com.",
       });
     }
   };
@@ -62,9 +62,9 @@ export default function Contact() {
         <h1 className="section-title">Contact &amp; Réservation</h1>
 
         <div className="section-intro">
-          <p>
+          {/* <p>
             Email : <a href="mailto:au.paradis.o.fer@gmail.com">au.paradis.o.fer@gmail.com</a>
-          </p>
+          </p> */}
           <p>
             Réseaux sociaux <i className="fa-brands fa-facebook-f" aria-hidden="true"></i> :{" "}
             <a

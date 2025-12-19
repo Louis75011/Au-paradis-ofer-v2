@@ -1,3 +1,11 @@
+import "dotenv/config";
+// const envFile =
+//   process.env.NODE_ENV === "production"
+//     ? (process.env.APO_ENV_FILE || ".env.production")
+//     : (process.env.APO_ENV_FILE || ".env.preprod");
+
+// dotenv.config({ path: new URL(envFile, import.meta.url) });
+
 import express from "express";
 import nodemailer from "nodemailer";
 import { z } from "zod";
@@ -9,7 +17,7 @@ app.disable("x-powered-by");
 
 // --- ENV
 const PORT = Number(process.env.PORT || 3000);
-const PUBLIC_SITE_URL = process.env.PUBLIC_SITE_URL || "http://localhost:5174";
+const PUBLIC_SITE_URL = process.env.PUBLIC_SITE_URL || "http://localhost:5175";
 
 // CORS : liste séparée par virgules (recommandé)
 const allowedOrigins = (process.env.CORS_ORIGIN || PUBLIC_SITE_URL)
@@ -40,7 +48,10 @@ app.get("/health", (_req, res) => res.json({ ok: true, env: process.env.NODE_ENV
 if (!process.env.STRIPE_SECRET_KEY) {
   console.warn("[env] STRIPE_SECRET_KEY manquant (checkout désactivé tant que non fourni).");
 }
-const stripe = process.env.STRIPE_SECRET_KEY ? new Stripe(process.env.STRIPE_SECRET_KEY) : null;
+
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2024-06-20" })
+  : null;
 
 function getPriceId(priceKey) {
   if (priceKey === "GITE_BASIC") return process.env.STRIPE_PRICE_GITE_BASIC;
@@ -48,7 +59,7 @@ function getPriceId(priceKey) {
   return null;
 }
 
-app.post("/checkout/gite", async (req, res) => {
+app.post("/api/checkout/gite", async (req, res) => {
   try {
     if (!stripe) return res.status(500).json({ error: "Stripe non configuré." });
 
