@@ -7,7 +7,7 @@ export default function Installations() {
 
     return (
         <div className="page">
-            <section>
+            <section className="installations">
                 <h1 className="section-title">Nos installations</h1>
                 <p className="section-intro">
                     Nos installations évoluent : l'accueil, le manège semi-couvert, la sellerie, l'allée praticable et l'aire de

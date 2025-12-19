@@ -52,6 +52,36 @@
     margin-top: 1.5rem;
 }
 
+// INSTALLATIONS
+/* Installations : aligner le badge en bas sur toutes les cartes */
+.installations .cards-grid {
+    align-items: stretch;
+}
+
+.installations .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.installations .card-media {
+    flex: 0 0 auto;
+}
+
+.installations .card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+.installations .card-badge {
+    margin-top: auto;
+    /* ✅ pousse le badge en bas */
+    align-self: flex-start;
+    /* ✅ reste aligné à gauche */
+}
+
 /* Avis Section */
 .avis-container {
     background-color: var(--color-brand-cream);
