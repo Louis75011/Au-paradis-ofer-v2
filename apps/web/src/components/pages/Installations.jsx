@@ -1,7 +1,10 @@
 // apps/web/src/components/pages/Installations.jsx
-import { installations } from "../../data/siteData.js";
+import { useSiteData } from "../../data/useSiteData.js";
+
 
 export default function Installations() {
+    const { installations } = useSiteData();
+
     return (
         <div className="page">
             <section>
@@ -12,7 +15,7 @@ export default function Installations() {
                 </p>
 
                 <div className="cards-grid">
-                    {installations.elements.map((it) => (
+                    {installations.map((it) => (
                         <div className="card" key={it.nom}>
                             {it.photos?.length ? (
                                 <img src={it.photos[0]} alt={it.nom} className="card-image" />

@@ -1,9 +1,10 @@
 // apps/web/src/components/pages/Accueil.jsx
 import { useEffect, useMemo, useState } from "react";
-import { avis, evenements } from "../../data/siteData.js";
+import { useSiteData } from "../../data/useSiteData.js";
 import { NavLink } from "react-router-dom";
 
 export default function Accueil() {
+    const { avis, evenements } = useSiteData();
    
     const slides = useMemo(() => ([
         { src: "/images/carrousel/au-paradis-ofer-01.jpg", alt: "Au Paradis O'Fer - Zoothérapie équine" },

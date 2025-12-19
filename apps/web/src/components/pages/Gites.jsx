@@ -1,8 +1,8 @@
 // apps/web/src/components/pages/Gites.jsx
-import { useMemo } from "react";
+import { useSiteData } from "../../data/useSiteData.js";
 
 export default function Gites() {
-  const gites = useMemo(() => window.APO_DATA?.gites ?? [], []);
+  const { gites } = useSiteData();
 
   return (
     <div className="page">

@@ -1,8 +1,9 @@
 // apps/web/src/components/pages/Faq.jsx
 import { useState } from "react";
-import { faqData } from "../../data/siteData.js";
+import { useSiteData } from "../../data/useSiteData.js";
 
 export default function Faq() {
+  const { faqData } = useSiteData();
   const [openIndex, setOpenIndex] = useState(null);
 
   return (

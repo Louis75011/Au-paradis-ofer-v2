@@ -1,7 +1,9 @@
 // apps/web/src/components/pages/Chevaux.jsx
-import { chevaux } from "../../data/siteData.js";
+import { useSiteData } from "../../data/useSiteData.js";
 
 export default function Chevaux() {
+  const { chevaux } = useSiteData();
+
   return (
     <div className="page">
       <section>
