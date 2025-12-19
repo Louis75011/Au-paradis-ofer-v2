@@ -9,7 +9,7 @@ export default function MobileMenu() {
   return (
     <div className="mobile-menu" id="mobileMenu">
       <ul>
-        <li><a href="#apropos" onClick={go("apropos")}>À propos</a></li>
+        <li><a href="#a-propos" onClick={go("a-propos")}>À propos</a></li>
         <li><a href="#chevaux" onClick={go("chevaux")}>Nos chevaux</a></li>
         <li><a href="#installations" onClick={go("installations")}>Nos installations</a></li>
         <li><a href="#seances" onClick={go("seances")}>Séances</a></li>

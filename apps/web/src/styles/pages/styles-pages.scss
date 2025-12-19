@@ -1,5 +1,18 @@
 // apps\web\src\styles\pages\styles-pages.scss
 // Avis Faq Seances...
+.page--home {
+    padding-top: 0 !important;
+}
+
+// a-propos
+.apropos-intro {
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: var(--color-gray-dark);
+    font-size: 1.1rem;
+}
+
 /* Tarifs */
 .tarifs-grid {
     display: grid;
@@ -52,8 +65,18 @@
     margin-top: 1.5rem;
 }
 
-// INSTALLATIONS
+/* CHEVAUX : images un peu plus hautes */
+.chevaux .card {
+    --card-media-ratio: 4 / 3; // plus haut que 16/9
+    --card-media-fit: cover; // “plein”, plus joli
+}
+
 /* Installations : aligner le badge en bas sur toutes les cartes */
+.installations .card {
+    --card-media-ratio: 3 / 2;
+    --card-media-fit: cover;
+}
+
 .installations .cards-grid {
     align-items: stretch;
 }

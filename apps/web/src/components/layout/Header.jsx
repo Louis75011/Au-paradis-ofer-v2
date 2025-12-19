@@ -39,7 +39,7 @@ export default function Header() {
         </NavLink>
 
         <ul>
-          <li><NavLink to="/apropos">À propos</NavLink></li>
+          <li><NavLink to="/a-propos">À propos</NavLink></li>
           <li><NavLink to="/chevaux">Nos chevaux</NavLink></li>
           <li><NavLink to="/installations">Nos installations</NavLink></li>
           <li><NavLink to="/seances">Séances</NavLink></li>
@@ -55,7 +55,7 @@ export default function Header() {
 
       <div className="mobile-menu" id="mobileMenu">
         <ul>
-          <li><NavLink to="/apropos" onClick={closeMobileMenu}>À propos</NavLink></li>
+          <li><NavLink to="/a-propos" onClick={closeMobileMenu}>À propos</NavLink></li>
           <li><NavLink to="/chevaux" onClick={closeMobileMenu}>Nos chevaux</NavLink></li>
           <li><NavLink to="/installations" onClick={closeMobileMenu}>Nos installations</NavLink></li>
           <li><NavLink to="/seances" onClick={closeMobileMenu}>Séances</NavLink></li>

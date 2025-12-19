@@ -27,19 +27,16 @@ export default function Mentions() {
 
         <h2>Développement et conception technique</h2>
         <p>
-          <strong>
-            <a href="https://arx-systema.fr/" target="_blank" rel="noopener noreferrer">
-              Arx Systema — France
-            </a>
-          </strong>
-          <br />
-        </p>
-        <p>
-          <strong>
-            <a href="https://www.youtube.com/@arxsystema" target="_blank" rel="noopener noreferrer">
-              Arx Systema — Vidéos
-            </a>
-          </strong>
+          <strong>Arx Systema&nbsp;</strong>
+          —&nbsp;
+          <a href="https://arx-systema.fr/" target="_blank" rel="noopener noreferrer">
+            Site
+          </a>
+          &nbsp;·&nbsp;
+          <a href="https://arxsystema.zohobookings.eu/#/253185000000049074" target="_blank" rel="noopener noreferrer">
+            Appel
+          </a>
+
           <br />
         </p>
         <p>

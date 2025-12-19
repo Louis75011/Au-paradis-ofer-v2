@@ -11,12 +11,19 @@ NOTES.md
 # FICHIERS SENSIBLES ET CONFIGURATION
 # ============================================
 # Variables d'environnement et clés API
+# Env files
 .env
-.env.local
-.env.development
-.env.production
-.env.test
-*.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+pm2-*.log
+
+# OS
+.DS_Store
+Thumbs.db
 
 # Fichiers de configuration sensibles
 config.json

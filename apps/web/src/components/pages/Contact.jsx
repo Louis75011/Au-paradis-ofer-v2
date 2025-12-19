@@ -2,6 +2,7 @@
 import { useState } from "react";
 import "../../styles/pages/styles-pages.scss";
 import "../../styles/components/contact-form.scss";
+// au.paradis.o.fer@gmail.com
 
 export default function Contact() {
   const [form, setForm] = useState({ nom: "", email: "", date: "", message: "" });

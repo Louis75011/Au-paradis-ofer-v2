@@ -50,7 +50,7 @@ export const router = createBrowserRouter([
         errorElement: <RouteError />,
         children: [
             { index: true, element: <Accueil /> },
-            { path: "apropos", element: <Apropos /> },
+            { path: "a-propos", element: <Apropos /> },
             { path: "chevaux", element: <Chevaux /> },
             { path: "installations", element: <Installations /> },
             { path: "seances", element: <Seances /> },

@@ -5,46 +5,49 @@ export default function Apropos() {
             <section>
                 <h1 className="section-title">À propos — Au Paradis O&apos;Fer</h1>
 
-                <div className="section-intro">
+                <div className="apropos-intro">
                     <p>
-                        Nichée au cœur des Hauts-de-France, notre structure Au Paradis O&apos;Fer est un havre de sérénité où la
-                        relation entre l&apos;homme et le cheval prend toute sa dimension. Ici, le rythme apaisé de la campagne se
-                        mêle au souffle des crinières, offrant à chacun un moment de ressourcement authentique.
+                        Nichée au cœur des <strong>Hauts-de-France</strong>,{" "}
+                        <strong>Au Paradis O&apos;Fer</strong> est un havre de sérénité où la{" "}
+                        <strong>relation entre l&apos;homme et le cheval</strong> prend toute sa dimension.
+                        Le rythme apaisé de la campagne y offre un moment de ressourcement authentique.
                     </p>
 
                     <p>
-                        Nous proposons des séances de médiation animale et des animations équestres adaptées à tous les âges et à
-                        toutes les situations : enfants en quête de découverte, adolescents désireux de gagner confiance, adultes et
-                        aînés recherchant détente et réconfort, ou encore personnes faisant face à des difficultés sociales ou de
-                        santé.
+                        Nous proposons des <strong>séances de médiation animale</strong> et des{" "}
+                        <strong>animations équestres</strong>, adaptées à tous les âges et à toutes les
+                        situations, de la découverte à l’accompagnement personnalisé.
                     </p>
 
                     <p>
-                        Notre démarche est fondée sur l&apos;écoute, le respect et la chaleur humaine. Les chevaux et poneys
-                        deviennent des compagnons de chemin, aidant à renouer avec soi-même, à vivre pleinement l&apos;instant
-                        présent, et à goûter la beauté simple de la nature.
+                        Notre démarche repose sur <strong>l’écoute</strong>, le{" "}
+                        <strong>respect</strong> et la <strong>chaleur humaine</strong>.
+                        Les chevaux deviennent de véritables compagnons, aidant à renouer avec soi-même
+                        et à vivre pleinement l’instant présent.
                     </p>
 
                     <p>
-                        Notre site évolue : vous y trouverez un calendrier interactif, des fiches pratiques, une galerie photo/vidéo
-                        et un espace de réservation en ligne pour faciliter votre venue.
+                        Le site évolue progressivement : <strong>calendrier interactif</strong>,{" "}
+                        <strong>galerie photo et vidéo</strong> et{" "}
+                        <strong>réservation en ligne</strong> facilitent votre venue.
                     </p>
 
                     <p>
-                        Que vous veniez pour une initiation, un moment de bien-être ou un projet d&apos;accompagnement, Au Paradis
-                        O&apos;Fer vous accueille avec bienveillance et passion.
+                        Pour une initiation, un moment de bien-être ou un accompagnement,
+                        <strong> Au Paradis O&apos;Fer</strong> vous accueille avec bienveillance et passion.
                     </p>
 
-                    <p style={{ fontSize: "0.9rem", marginTop: "2rem" }}>
+                    <p style={{ fontSize: "0.85rem", marginTop: "2rem", opacity: 0.85 }}>
                         <em>
-                            Pour en savoir plus sur la gestion des données personnelles et des cookies, vous pouvez consulter notre{" "}
+                            Données personnelles et cookies :{" "}
                             <a href="/cookies" style={{ color: "var(--color-brand-sky)" }}>
                                 politique dédiée
                             </a>{" "}
-                            conforme au RGPD.
+                            (RGPD).
                         </em>
                     </p>
                 </div>
+
 
                 <div className="about-diploma">
                     <h3 style={{ color: "var(--color-brand-dark)", marginBottom: "1rem" }}>Certification officielle</h3>

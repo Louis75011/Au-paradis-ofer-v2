@@ -6,7 +6,7 @@ export default function Chevaux() {
 
   return (
     <div className="page">
-      <section>
+      <section className="chevaux">
         <h1 className="section-title">Nos chevaux</h1>
         <p className="section-intro">
           Des compagnons sélectionnés pour leur douceur, leur stabilité et leur habituation au contact humain.
@@ -15,7 +15,16 @@ export default function Chevaux() {
         <div className="cards-grid">
           {chevaux.map((cheval) => (
             <div className="card" key={cheval.nom}>
-              <img src={cheval.photo} alt={cheval.nom} className="card-media" />
+              <div className="card-media">
+                <img
+                  src={cheval.photo}
+                  alt={cheval.nom}
+                  className="card-image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
               <div className="card-content">
                 <h3 className="card-title">{cheval.nom}</h3>
                 <p className="card-meta">{cheval.type} • {cheval.race} • {cheval.age} ans</p>
