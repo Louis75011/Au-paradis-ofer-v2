@@ -9,15 +9,22 @@ export default function Header() {
     const menu = document.getElementById("mobileMenu");
     if (!burger || !menu) return;
 
-    const toggle = () => menu.classList.toggle("open");
-    burger.addEventListener("click", toggle);
+    const toggle = () => {
+      const isOpen = menu.classList.toggle("active");
+      burger.classList.toggle("active", isOpen);
+      burger.setAttribute("aria-expanded", String(isOpen));
+    };
 
+    burger.addEventListener("click", toggle);
     return () => burger.removeEventListener("click", toggle);
   }, []);
 
   const closeMobileMenu = () => {
     const menu = document.getElementById("mobileMenu");
-    menu?.classList.remove("open");
+    const burger = document.getElementById("burgerIcon");
+    menu?.classList.remove("active");
+    burger?.classList.remove("active");
+    burger?.setAttribute("aria-expanded", "false");
   };
 
   return (

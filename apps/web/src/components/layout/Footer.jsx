@@ -45,7 +45,9 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; Depuis 2025 — Au Paradis O&apos;Fer — Propulsé par Arx Sytema</p>
+        <p>
+          &copy; Depuis 2025 — Au Paradis O&apos;Fer — <span className="nowrap">Propulsé&nbsp;par Arx Systema</span>
+        </p>
       </div>
     </footer>
   );

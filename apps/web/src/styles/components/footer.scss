@@ -41,8 +41,19 @@ footer {
 
 .footer-bottom {
     text-align: center;
+    padding: 1rem 1.25rem;
     margin-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--color-brand-cream);
     background-color: var(--color-brand-very-dark);
+}
+
+.footer-bottom p {
+  margin: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.nowrap {
+  white-space: nowrap; /* ✅ garde “Propulsé par Arx Systema” ensemble */
 }

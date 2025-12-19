@@ -6,7 +6,7 @@
 /* Header principal */
 header {
     background-color: var(--color-brand-dark);
-    padding: 1.25rem 1.5rem;
+    padding: .5rem 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -22,7 +22,7 @@ nav {
 }
 
 .logo {
-    height: 95px;
+    height: 105px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -60,7 +60,8 @@ nav ul li a:hover {
    ============================================ */
 
 .burger-icon {
-    display: none; /* Masqué par défaut (desktop) */
+    display: none;
+    /* Masqué par défaut (desktop) */
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
@@ -99,7 +100,8 @@ nav ul li a:hover {
    ============================================ */
 
 .mobile-menu {
-    display: none; /* Masqué par défaut */
+    display: none;
+    /* Masqué par défaut */
     position: fixed;
     top: 0;
     left: 0;
@@ -144,11 +146,17 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
+.mobile-menu.open {
+    display: flex;
+    opacity: 1;
+}
+
 /* ============================================
    RESPONSIVE : AFFICHAGE MOBILE
    ============================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
+
     /* Masquer le menu classique desktop */
     nav ul {
         display: none;
