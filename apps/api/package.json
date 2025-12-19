@@ -1,0 +1,16 @@
+{
+  "name": "api",
+  "private": true,
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon --watch . --ext js,mjs,json --exec node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.9"
+  }
+}

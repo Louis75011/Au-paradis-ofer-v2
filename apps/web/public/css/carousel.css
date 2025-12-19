@@ -1,0 +1,193 @@
+/* Carousel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay persistant sur toutes les images */
+.carousel-overlay-persistent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 70%, transparent 100%);
+    color: var(--color-white);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    z-index: 10;
+    pointer-events: none; /* Permet aux boutons de navigation de rester cliquables */
+}
+
+.carousel-overlay-persistent h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-overlay-persistent p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+    pointer-events: auto; /* Réactive les clics sur les boutons */
+}
+
+.btn {
+    background-color: var(--color-brand-sky);
+    color: var(--color-white);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #017a98;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: var(--color-brand-dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-brand-light);
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 1rem;
+    z-index: 20; /* Au-dessus de l'overlay */
+}
+
+.carousel-nav button {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-nav button:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: scale(1.1);
+}
+
+.carousel-indicators {
+    text-align: center;
+    padding: 1rem;
+}
+
+.carousel-indicators button {
+    background-color: var(--color-gray-medium);
+    border: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-indicators button.active {
+    background-color: var(--color-brand-sky);
+    transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-slide img {
+        height: 350px;
+    }
+
+    .carousel-overlay-persistent {
+        padding: 1.5rem 1rem;
+    }
+
+    .carousel-overlay-persistent h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .carousel-overlay-persistent p {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .carousel-btns {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .carousel-nav button {
+        padding: 0.75rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide img {
+        height: 280px;
+    }
+
+    .carousel-overlay-persistent h2 {
+        font-size: 1.25rem;
+    }
+
+    .carousel-overlay-persistent p {
+        font-size: 0.875rem;
+    }
+}
