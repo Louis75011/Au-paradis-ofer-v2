@@ -1,7 +1,9 @@
 // apps/web/src/components/pages/Faq.jsx
 import { useState } from "react";
 import { useSiteData } from "../../data/useSiteData.js";
+import FaqChatbot from "../faq/FaqChatbot.jsx";
 import "../../styles/pages/styles-pages.scss";
+import "../../styles/components/faq-chat.scss";
 
 export default function Faq() {
   const { faqData } = useSiteData();
@@ -31,6 +33,9 @@ export default function Faq() {
           })}
         </div>
       </section>
+
+      {/* Chatbot FAQ (local, simple, rapide) */}
+      <FaqChatbot faqData={faqData} toEmail="au.paradis.o.fer@gmail.com" />
     </div>
   );
 }
